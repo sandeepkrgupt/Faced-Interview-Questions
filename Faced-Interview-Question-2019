@@ -1,0 +1,94 @@
+Extentia :- 
+
+1 What is cross domain Error ?
+Ans - Cross domain or origin is a machenism that allow restricted web resource or domain to be requested from another domain.
+Cross domain error occurs when -
+i. Js try to access info. which it should not Like -
+  you try to read cookie of another domain.
+  if you try to do XMLHTTP hijeck, steal visitor session etc.
+It is a securiety feature which is now standered in all browsers.
+
+-----------------------------------------
+2. what are HTTP Headers used for ?
+Ans - They provide required info. about request and response.
+----------------------------------------
+3. How can we pass values from one independent comp. to another in React ?
+Ans - Using props or redux state we can do so.
+Example -
+class A extends React.Component {
+  constructor() {
+    super();
+    this.onClickshow = this.onClickShow.bind(this);
+  }
+  onclickShow() {
+    console.log("this ia A comp.");
+  }
+  
+  render() {
+    return (
+        <B myclickFun = {this.onClickShow} />
+    )
+  }
+}
+class B extend React.Component {
+  constructor(props){}
+  render() {
+    return (
+      <div>
+        <button onClick={this.props.myClickFun}>ok</button>
+      </div>
+    )
+  }
+}
+----------------------------------------------
+4. whta is bind method? and what will happen if we won't bind our func. to event ?
+Ans - bind creates new func. that will have 'this' set to first parameter passed to bind.
+var sum = function(a,b) {
+  return a+b;
+}
+var add = sum.bind(null, 5);
+console.log(add(10));
+output - 15
+when we won't bind our function to event it will show - this is undefined due to your event loss it's context or this.
+---------------------------------------------
+5. whyt is Object.Keys ?
+Ans - it returns an array of given objects own property keys or name not value.
+var obj1 = {
+  name: "john",
+  age:28
+}
+console.log(Object.keys(obj1));
+output - ["name", "age"]
+---------------------------------------------
+6. Can we do inheritance in es5 ?
+Ans - Yes we can do inheritance using prototype. Each object ia attached with prototype.
+function Bird(type, color) {
+  this.type = type;
+  this.color = color;
+}
+Bird('Indian Bird', 'Red');
+Bird.prototype.name = 'Parrot';
+---------------------------------------------
+7. Bootstrap Grid vs Flex ?
+Ans - Grid layout is a two dimensional sys., means row and column. Gird is used for layout first approach
+flex is one directional. it is used for content first approach.
+-------------------------------------------
+8. diff. b/w normal func. and arrow func. ?
+Ans - Arguments and objects are not available in arrow function also arrow fun do not have it's own this.
+ They have some nice properties which allow them to work well as callback functions
+ --------------------------------------
+ 9.what is Object.assign used for ?
+ Ans - it is used to copy values from one or more source object to target object.
+ const target = {a:1,b:2};
+ const source = {b:3,c:4};
+ Object.assign(target,source);
+ output - {a:1,b:3,c:4}
+ -----------------------------------
+ 10. cass we create variable in css or css3 ?
+ Ans - yes we can using var() method.
+ :root { --homepage-bg : #777};
+ #homePage {background-color: var(--homepage-bg)}
+ rules -
+ always start with :root or body selector.
+ must begin with -- and it is case sensitive
+ -------------------------------------------------------------------------------------------------------------------
