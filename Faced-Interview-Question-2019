@@ -51,7 +51,7 @@ console.log(add(10));
 output - 15
 when we won't bind our function to event it will show - this is undefined due to your event loss it's context or this.
 ---------------------------------------------
-5. whyt is Object.Keys ?
+5. what is Object.Keys ?
 Ans - it returns an array of given objects own property keys or name not value.
 var obj1 = {
   name: "john",
