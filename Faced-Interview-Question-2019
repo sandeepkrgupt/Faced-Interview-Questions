@@ -84,11 +84,14 @@ Ans - Arguments and objects are not available in arrow function also arrow fun d
  Object.assign(target,source);
  output - {a:1,b:3,c:4}
  -----------------------------------
- 10. cass we create variable in css or css3 ?
+ 10. can we create variable in css or css3 ?
  Ans - yes we can using var() method.
  :root { --homepage-bg : #777};
  #homePage {background-color: var(--homepage-bg)}
  rules -
  always start with :root or body selector.
  must begin with -- and it is case sensitive
+—-----------------------
+the major difference is that display: inline-block allows to set a width and height on the element. 
+Also, with display: inline-block , the top and bottom margins/paddings
  -------------------------------------------------------------------------------------------------------------------
