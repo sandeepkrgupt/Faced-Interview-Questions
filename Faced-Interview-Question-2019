@@ -1,5 +1,5 @@
 Extentia :- 
-
+=====================
 1 What is cross domain Error ?
 Ans - Cross domain or origin is a machenism that allow restricted web resource or domain to be requested from another domain.
 Cross domain error occurs when -
@@ -95,3 +95,81 @@ Ans - Arguments and objects are not available in arrow function also arrow fun d
 the major difference is that display: inline-block allows to set a width and height on the element. 
 Also, with display: inline-block , the top and bottom margins/paddings
  -------------------------------------------------------------------------------------------------------------------
+ 
+ Intelliswift
+ ==========================
+ 1.write a program to square array elements.
+ Ans -
+let arr = [1, 6, 7, 9];
+let result = arr.map(x => x ** 2); // ** is es6 exponential 
+console.log(result);
+output - [1,36,49,81]
+ 2. Does map() function need a return statement ?
+No it's not necessary.
+fish = [ "piranha","cod", "eel" ];
+// Print out each item in the array
+let printFish = fish.map(individualFish => {
+    console.log(individualFish);
+});
+printFish;
+----------------------------------
+3. what is HOC in js? give an example.
+Ans-
+A higher-order component (HOC) is an advanced technique in React for reusing component logic.
+A higher order component accepts a component as an argument and returns a new component — 
+React Redux’s connect function is an example of this and returns an HOC.
+Example -
+import { addTodo, deleteTodo, toggleTodo } from './actionCreators'
+
+const mapDispatchToProps = {
+  addTodo,
+  deleteTodo,
+  toggleTodo
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(TodoApp) // TodoApp is our component.
+Syntax -
+const EnhancedComponent = higherOrderComponent(WrappedComponent);
+-----------------------------------------
+4. what is pure function? give an example.
+Ans -
+A function is only pure, if given the same input, it will always produce the same output.
+const sum = (a, b) => a+b ;
+highpass(5, 5); // => 10
+highpass(2, 2); // => 4
+Math.Random() is also a pure function which always return random value between 0 and 1.
+why should we use them -
+One of the major benefits of using pure functions is they are immediately testable. 
+They will always produce the same result if you pass in the same arguments. 
+They also makes maintaining and refactoring code much easier.
+-------------------------------------
+5. how to iterate array and objects? write all methods?
+1. for 2. map 3. spread operator 4. forEach
+1. for -
+let myArray = ["one", "two", "three", "four"];
+for(let i = 0; i < myArray.length; i++){
+   console.log(myArray[i]);
+}
+2. map -
+let fish = [ "piranha", "barracuda", "cod", "eel" ];
+let printFish = fish.map(individualFish => {
+    console.log(individualFish);
+});
+printFish;
+3. forEach -
+let fish = [ "piranha", "barracuda", "cod", "eel" ];
+fish.forEach(function(element) {
+  console.log(element);
+});
+4. ... operator
+let numbers = [9, 4, 7, 1];
+Math.min(...numbers);
+----------------------------------
+ 6. Difference b/w map() each and forEach() ?
+ Ans -
+.map() is designed to both iterate and create a new resulting array.
+.each() and forEach() is designed to be an iterator (no new array created).
+ 
