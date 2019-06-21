@@ -120,12 +120,10 @@ A higher-order component (HOC) is an advanced technique in React for reusing com
 A higher order component accepts a component as an argument and returns a new component — 
 React Redux’s connect function is an example of this and returns an HOC.
 Example -
-import { addTodo, deleteTodo, toggleTodo } from './actionCreators'
+import { addTodo } from './actionCreators'
 
 const mapDispatchToProps = {
-  addTodo,
-  deleteTodo,
-  toggleTodo
+  addTodo
 }
 
 export default connect(
