@@ -1,3 +1,4 @@
+====================
 Extentia :- 
 =====================
 1 What is cross domain Error ?
@@ -95,7 +96,7 @@ Ans - Arguments and objects are not available in arrow function also arrow fun d
 the major difference is that display: inline-block allows to set a width and height on the element. 
 Also, with display: inline-block , the top and bottom margins/paddings
  -------------------------------------------------------------------------------------------------------------------
- 
+ ==========================
  Intelliswift
  ==========================
  1.write a program to square array elements.
