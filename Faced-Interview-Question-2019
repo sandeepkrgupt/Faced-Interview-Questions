@@ -180,3 +180,15 @@ Math.min(...numbers);
 .map() is designed to both iterate and create a new resulting array.
 .each() and forEach() is designed to be an iterator (no new array created).
  
+7. what is functional programming ? is js a functional programming language ?
+Ans -
+I would say no. Although it does support closures and functions as first class values, the fact that it does not 
+support tail call optimization or provide any actual performance optimization for recursion.
+
+functional programming languages don’t support flow Controls like loop statements and conditional 
+statements like If-Else and Switch Statements. 
+They directly use the functions and functional calls.
+but functional programming languages support popular concepts such as 
+Abstraction, Encapsulation, Inheritance, and Polymorphism.
+Features - bug free code, efficiency, support nested functions.
+Javascript is object oriented language.
