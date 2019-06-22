@@ -95,6 +95,14 @@ Ans - Arguments and objects are not available in arrow function also arrow fun d
 —-----------------------
 the major difference is that display: inline-block allows to set a width and height on the element. 
 Also, with display: inline-block , the top and bottom margins/paddings
+------------------------
+Simple Closure Example -
+function make_counter() {
+  var counter = 0;
+  return function() {
+    return ++counter;
+  };
+}
  -------------------------------------------------------------------------------------------------------------------
  ==========================
  Intelliswift
