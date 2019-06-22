@@ -192,3 +192,28 @@ but functional programming languages support popular concepts such as
 Abstraction, Encapsulation, Inheritance, and Polymorphism.
 Features - bug free code, efficiency, support nested functions.
 Javascript is object oriented language.
+
+8. Higher order functions (HOC) with example ?
+Ans-
+A higher-order function is a function that operates on other functions. 
+That is, it takes functions as inputs and/or returns them as outputs.
+Some fantastic ones are built into the language, such as Array.map, Array.filter, and Array.reduce.
+
+myButton.click(function thisIsACallback() {
+  console.log('Someone clicked me!');
+});
+Here, click is the higher-order function and thisIsACallback is the callback. 
+click doesn't call it until the user clicks the button.
+
+Note -
+functions which may not necessarily have a name. Those are called anonymous functions. 
+like -
+function makeMoreThanSum(f) {//This is a higher-order function
+   return function(n1, n2) {
+       sum(f(n1), n2)
+   }
+}
+var sumSquareOfFirst = makeMoreThanSum(function(n){
+    return n*n;
+});
+sumSquareOfFirst(2,1);//5
