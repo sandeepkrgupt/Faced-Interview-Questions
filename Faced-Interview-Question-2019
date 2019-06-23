@@ -164,7 +164,15 @@ let fish = [ "piranha", "tigerFish", "cod", "eel" ];
 let printFish = fish.map(individualFish => {
     console.log(individualFish);
 });
-printFish;
+if you use return statement it will only return last element i.e "eel". so do below-
+fish = [ "piranha","cod", "eel" ];
+arr = [];
+let printFish = fish.map(individualFish => {
+  arr = arr + " " +individualFish
+    return arr;
+});
+console.log(arr); // "piranha cod eel"
+
 3. forEach -
 let fish = [ "piranha", "tigerFish", "cod", "eel" ];
 fish.forEach(function(element) {
