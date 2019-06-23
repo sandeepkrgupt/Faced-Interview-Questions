@@ -120,7 +120,6 @@ fish = [ "piranha","cod", "eel" ];
 let printFish = fish.map(individualFish => {
     console.log(individualFish);
 });
-printFish;
 ----------------------------------
 3. what is HOC in js? give an example.
 Ans-
