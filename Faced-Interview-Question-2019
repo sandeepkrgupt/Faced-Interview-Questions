@@ -235,7 +235,7 @@ const fruits = [{
 const obj1 = Object.keys(fruits[0])
 console.log(obj1) // ["apple","orange","pear"]
 
-ii. Object.value -
+ii. Object.values -
 creates an array that contains the values of an object
 const fruits = {
   apple: 28,
@@ -243,7 +243,7 @@ const fruits = {
   pear: 54,
 }
 
-const obj1 = Object.value(fruits)
+const obj1 = Object.values(fruits)
 console.log(obj1) // ["28","17","54"]
 
 iii. for in -
