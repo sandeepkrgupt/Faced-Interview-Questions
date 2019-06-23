@@ -179,8 +179,8 @@ fish.forEach(function(args) {
   console.log(args);
 });
 4. ... operator
-let numbers = [9, 4, 7, 1];
-Math.min(...numbers);
+let fish = [ "piranha", "tigerFish", "cod", "eel" ];
+console.log(...fish);
 5. for of -
 let fish = ["piranha", "tigerFish","cod","eel"];
 for (let x of fish) {
