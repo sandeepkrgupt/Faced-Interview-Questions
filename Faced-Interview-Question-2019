@@ -175,8 +175,8 @@ console.log(arr); // "piranha cod eel"
 
 3. forEach -
 let fish = [ "piranha", "tigerFish", "cod", "eel" ];
-fish.forEach(function(element) {
-  console.log(element);
+fish.forEach(function(args) {
+  console.log(args);
 });
 4. ... operator
 let numbers = [9, 4, 7, 1];
