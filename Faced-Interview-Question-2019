@@ -153,27 +153,32 @@ One of the major benefits of using pure functions is they are immediately testab
 They will always produce the same result if you pass in the same arguments. 
 They also makes maintaining and refactoring code much easier.
 -------------------------------------
-5. how to iterate array and objects? write all methods?
-1. for 2. map 3. spread operator 4. forEach
+5. how to iterate array items? write all methods?
+1. for 2. map 3. spread operator 4. forEach 5.for of
 1. for -
-let myArray = ["one", "two", "three", "four"];
+let myArray = ["piranha", "tigerFish", "cod", "eel"];
 for(let i = 0; i < myArray.length; i++){
    console.log(myArray[i]);
 }
 2. map -
-let fish = [ "piranha", "barracuda", "cod", "eel" ];
+let fish = [ "piranha", "tigerFish", "cod", "eel" ];
 let printFish = fish.map(individualFish => {
     console.log(individualFish);
 });
 printFish;
 3. forEach -
-let fish = [ "piranha", "barracuda", "cod", "eel" ];
+let fish = [ "piranha", "tigerFish", "cod", "eel" ];
 fish.forEach(function(element) {
   console.log(element);
 });
 4. ... operator
 let numbers = [9, 4, 7, 1];
 Math.min(...numbers);
+5. for of -
+let fish = ["piranha", "tigerFish","cod","eel"];
+for (let x of fish) {
+  console.log(x);
+}
 ----------------------------------
  6. Difference b/w map() each and forEach() ?
  Ans -
@@ -217,3 +222,46 @@ var sumSquareOfFirst = makeMoreThanSum(function(n){
     return n*n;
 });
 sumSquareOfFirst(2,1);//5
+
+5. how to iterate Objects? write all methods.
+1. iterating objects keys only :-
+creates an array that contains the properties of an object
+const fruits = [{
+  apple: 28,
+  orange: 17,
+  pear: 54,
+}]
+
+const obj1 = Object.keys(fruits[0])
+console.log(obj1) // ["apple","orange","pear"]
+
+ii. Object.value -
+creates an array that contains the values of an object
+const fruits = {
+  apple: 28,
+  orange: 17,
+  pear: 54,
+}
+
+const obj1 = Object.value(fruits)
+console.log(obj1) // ["28","17","54"]
+
+iii. for in -
+const fruits = {
+  apple:28,
+  orange:17,
+  pear:54
+}
+for (let x in fruits) {
+  console.log(x); // output - 28, 17, 54
+}
+
+iv. Object.entries -
+creates an array of arrays. Each inner array has two item. The first item is the property; the second item is the value.
+const fruits = {
+  apple:28,
+  orange:17,
+  pear:54
+}
+const obj1 = Object.entries(fruits);
+console.log(obj1) // Array [Array ["apple", 28], Array ["orange", 17], Array ["pear", 54]]
