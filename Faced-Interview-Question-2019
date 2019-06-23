@@ -265,3 +265,13 @@ const fruits = {
 }
 const obj1 = Object.entries(fruits);
 console.log(obj1) // Array [Array ["apple", 28], Array ["orange", 17], Array ["pear", 54]]
+
+Object.defineProperty() -
+The static method Object.defineProperty() defines a new property directly on an object or empty object,
+
+const fruits = {};
+const newFruits = Object.defineProperty(fruits, 'property1'{
+  name: 'Mango',
+  price:100
+})
+console.log(newFruits); // Mango
