@@ -167,37 +167,37 @@ They also makes maintaining and refactoring code much easier.
 5. how to iterate array items? write all methods?
 1. for 2. map 3. spread operator 4. forEach 5.for of
 1. for -
-let myArray = ["piranha", "tigerFish", "cod", "eel"];
-for(let i = 0; i < myArray.length; i++){
-   console.log(myArray[i]);
+let numbers = [2, 4, 6, 8];
+for(let i = 0; i < numbers.length; i++){
+   console.log(numbers[i]*2);
 }
 2. map -
-let fish = [ "piranha", "tigerFish", "cod", "eel" ];
-let printFish = fish.map(individualFish => {
-    console.log(individualFish);
+let numbers = [4, 6, 8];
+let multiply = numbers.map(individualNumber => {
+    console.log(individualNumber*2);
 });
 if you use return statement it will only return last element i.e "eel". so do below-
-fish = [ "piranha","tigerFish","cod", "eel" ];
+let numbers = [4, 6, 8];
 arr = [];
-let printFish = fish.map(individualFish => {
-  arr = arr + " " +individualFish
+let multiply = numbers.map(individualNumber => {
+  arr = arr + " " +individualNumber*2
     return arr;
 });
-console.log(arr); // "piranha cod eel"
+console.log(arr); // "8 12 16"
 
 3. forEach -
-let fish = [ "piranha", "tigerFish", "cod", "eel" ];
-fish.forEach(function(args) {
-  console.log(args);
+let numbers = [4,8,12];
+numbers.forEach(function(args) {
+  console.log(args*2);
 });
 4. ... operator
-let fish = [ "piranha", "tigerFish", "cod", "eel" ];
-console.log(...fish);
+let numbers = [4,8,12];
+console.log(...numbers*2) //Error: Found non-callable @@iterator
 5. for of -
-let fish = ["piranha", "tigerFish","cod","eel"];
-for (let x of fish) {
-  console.log(x);
-}
+let numbers = [4,8,12];
+for (let x of numbers) {
+  console.log(x*4);
+} // [16,32,48]
 ----------------------------------
  6. Difference b/w map() each and forEach() ?
  Ans -
