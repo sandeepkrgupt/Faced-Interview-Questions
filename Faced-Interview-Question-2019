@@ -76,7 +76,19 @@ flex is one directional. it is used for content first approach.
 -------------------------------------------
 8. diff. b/w normal func. and arrow func. ?
 Ans - Arguments and objects are not available in arrow function also arrow fun do not have it's own this.
- They have some nice properties which allow them to work well as callback functions
+ They have some nice properties which allow them to work well as callback functions.
+ 
+ let user = { 
+	name: "React", 
+	arrowfun:() => { 
+		console.log("hello " + this.name); // no 'this' binding here 
+	}, 
+	normalFun(){	 
+		console.log("Welcome to " + this.name); // 'this' binding works here 
+	} 
+}; 
+user.arrowfun(); // hello
+user.normalFun();  // Welcome to React
  --------------------------------------
  9.what is Object.assign used for ?
  Ans - it is used to copy values from one or more source object to target object.
