@@ -1,0 +1,31 @@
+var a = {a: 1};
+var b = {a: 1};
+a == b //false
+a === b //false
+
+var c = a;
+a == c//true
+a === c //true
+-------------------------
+comparing two arrays and objects
+var object = { 'a': 1 };
+var other = { 'a': 1 };
+ 
+_.isEqual(object, other);
+// => true
+using pure js:-
+let arr1 = [1,2,3]
+let arr2 = [1,2,3]
+
+function comapre(arr1, arr2) {
+	const arrfinal = [];
+	arr1.forEach((arg1) => arr2.forEach((arg2)=> {
+		if(arg1 === arg2) {
+		 arrfinal.push(arg1);
+		}
+	})
+)
+	return arrfinal;
+}
+------------------------------
+https://www.thatjsdude.com/interview/js1.html
