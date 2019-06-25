@@ -43,3 +43,20 @@ console.log(bound);
 if - console.log(bound(1,2,3)); //output 8 
 --------------------------------------
 https://www.thatjsdude.com/interview/js1.html
+
+
+---() - - 
+
+var obj = {
+  id: 42,
+  counter: function counter() {
+    setTimeout(() => {
+      console.log(this.id);
+    }, 1000);
+  }
+};
+ES6 arrow functions can’t be bound to a this keyword, so it will lexically go up a scope, 
+and use the value of this in the scope in which it was defined.
+
+When you should use them
+Arrow functions shine best with anything that requires this to be bound to the context, and not the function itself.
