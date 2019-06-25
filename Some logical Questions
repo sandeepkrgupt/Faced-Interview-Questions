@@ -34,7 +34,6 @@ let obj1 = {num:2};
 const addToThis = function(a,b,c) {
 	return this.num +a+b+c;
 }
-let arr = [1,2,3];
 let bound = addToThis.bind(obj1);
 console.log(bound); 
 // output
