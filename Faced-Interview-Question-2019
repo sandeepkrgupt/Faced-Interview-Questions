@@ -479,7 +479,7 @@ console.log(6+4 + "4" + 9+9+2+"2"+5); //"10499225"
 Q11. closures 
 displayName doesn’t define any local variables, 
 yet it is able to alert name because name has been defined in the scope in which the closure was created — that of its outer function.
-
+Note :- Closures are useful because they let you associate some data (the lexical environment) with a function that operates on that data.
 function pam() {
     var name = "Pam Beesly";
     function displayName() {
