@@ -326,3 +326,182 @@ Object.seal(object1);
 object1.property1 = 33;
 console.log(object1.property1);
 // expected output: 33
+
+-------------------------------------------------
+-----------Incedo and Capita --------------------
+Q1 Ans - we are get array instead of setTimeout is zero.
+var anmtArray = [1,2,3,4,5,0]; 
+for (var i = 0; i < anmtArray.length; i++) {
+  setTimeout(function() {
+    console.log(i);
+  },0)
+};
+// output 6 6 6 6 6 6
+second example -
+var ary = ['kevin', 'mike', 'sally',];
+
+ary.forEach(function(person){
+  setTimeout(function(){
+    console.log(person);
+  },0);    
+}); 
+when setTimeout is zero it will immediately print the output.
+
+----------------------------
+Q2 Ans - Finding the sum of n odd numbers -
+// Method to check if a number is odd
+function odd(n){
+  return (n%2) // returing boolean value (0,1)
+}
+//Method to find sum of odd numbers till n
+function findSum(n) {
+  let sum = 0;
+  for(let i = 0; i <= n; i++){
+    if(odd(i)) {
+      sum += i;
+    }
+  }
+  return sum
+}
+var x = findSum(10);
+console.log('sum is -' , x)// 25
+//or
+console.log(`sum is ${findSum(10)}`)  //25
+------------------------------------
+Q3 Ans - string to array conversion 
+function myFunction() {
+  var str = "How are you doing today?";
+  var res = str.split(" ");
+  console.log(typeof(res)); // object
+  console.log(res); // ["How", "are", "you", "doing", "today?"]
+}
+-----------------------
+Q4 ans - array to string conversion 
+function myFunction() {
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  var x = fruits.toString();
+  console.log(x);
+} // "Banana", "Orange", "Apple", "Mango"
+-----------------------------------
+Q5. converting object to array
+var obj = {"name":"john","age":27,"salary":60000}
+var result = Object.keys(obj).map(function(key) {
+  return [key, obj[key]];
+});
+
+console.log(result); // [Array ["name", "john"], Array ["age", 27], Array ["salary", 60000]]
+----------------
+Q6. converting array to object -
+var arr = [1,'2','san',null];
+var x = Object.assign({}, arr);
+console.log(x); // Object { 0: 1, 1: "2", 2: "san", 3: null }
+-----------------------
+Q7. check an array for null or undefined values -
+The some() method tests whether at least one element in the array passes the test.
+var arr = [null, 2, null, null];
+var otherThanNull = arr.some(function (arg) {
+    return arg !== null;
+}); 
+console.log(otherThanNull); // true
+----------------------
+Q8. checking for empty array -
+var array = [null,undefined];
+if (array && array.length) {   
+   console.log('not empty');
+} else {
+   console.log('empty');
+} // not empty | if array = [] // empty
+-----------------------
+Q9. checking duplicate value in array -
+1st way
+let array1 = [3,5,6,7,8,13,8,6];
+function dublicateFunction(array) { 
+return array.filter( (item,i) => array.indexOf(array[i]) !== i); }
+console.log(dublicateFunction(array1));// [6,8]
+
+2nd way -
+function test(arr){
+	//var result = [];
+	for (var i = 0; i < arr.length-1; i++){
+		for (var j = i+1; j < arr.length; j++){
+			if (arr[i] == arr[j]){
+				console.log(arr[i]); // -2,4
+				//result.push(arr[i]);
+			}
+		}
+	}
+	//return result;
+}
+test([1, 2, -2, 4, 5, 4, 7, 8, -2, 6]);
+// if you use return then
+console.log(test([1, 2, -2, 4, 5, 4, 7, 8, -2, 6])); // [-2,4]
+----------------------------------
+Q9. output of below with var and let will be same
+let arr = [1,2,5,4,15];
+for (let i=0; i<arr.length; i++) {
+	console.log(arr[i]); // 1,2,5,4,15
+} 
+-----------------------
+Q10. difference between let and var -
+function varTest() {
+  var x = 1;
+  if (true) {
+    var x = 2;  // same variable!
+    console.log(x);  // 2
+  }
+  console.log(x);  // 2
+}
+varTest();
+============
+function letTest() {
+  let x = 1;
+  if (true) {
+    let x = 2;  // different variable
+    console.log(x);  // 2
+  }
+  console.log(x);  // 1
+}
+letTest();
+----------------------
+what will be the output of below -
+function sum(a,b) {
+	console.log(a+b);
+}
+
+sum(2+4+"4"+1+2,5+8+null+"1+3"); //  "6412131+3"
+----
+console.log(6+4 + "4" + 9+9+2+'ert'+5); // "104992ert5"
+----
+console.log(6+4 + "4" + 9+9+2+'ert'+5 -3); // "NAN"
+----
+console.log(6+4 + "4" + 9+9+2+"2"+5); //"10499225"
+---------------------------------
+Q11. closures 
+displayName doesn’t define any local variables, 
+yet it is able to alert name because name has been defined in the scope in which the closure was created — that of its outer function.
+
+function pam() {
+    var name = "Pam Beesly";
+    function displayName() {
+        alert (name);
+    }
+    function setName(newName) {
+        name = newName;
+    }
+    displayName();
+    setName("Pam Halpert");
+    displayName();
+}
+pam();
+===== 
+calling inner func through outer fun variable
+function makeFunc() {
+  var name = 'Mozilla';
+  function displayName() {
+    alert(name);
+  }
+  return displayName;
+}
+
+var myFunc = makeFunc(); // outer func. variable.
+myFunc();
