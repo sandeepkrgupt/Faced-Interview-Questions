@@ -329,18 +329,18 @@ console.log(object1.property1);
 
 -------------------------------------------------
 -----------Incedo and Capita --------------------
-Q1 Ans - we are get array instead of setTimeout is zero.
-var anmtArray = [1,2,3,4,5,0]; 
-for (var i = 0; i < anmtArray.length; i++) {
+
+Q1 Ans - we can get array items instead of setTimeout is zero.
+var arr = [1,2,3,4,5,0]; 
+for (var i = 0; i < arr.length; i++) {
   setTimeout(function() {
-    console.log(i);
+    console.log(arr[i]);
   },0)
 };
-// output 6 6 6 6 6 6
+// output 1,2,3,4,5,0
 second example -
-var ary = ['kevin', 'mike', 'sally',];
-
-ary.forEach(function(person){
+var arr = ['kevin', 'mike', 'sally',];
+arr.forEach(function(person){
   setTimeout(function(){
     console.log(person);
   },0);    
@@ -354,11 +354,11 @@ function odd(n){
   return (n%2) // returing boolean value (0,1)
 }
 //Method to find sum of odd numbers till n
-function findSum(n) {
+function findSum(a) {
   let sum = 0;
-  for(let i = 0; i <= n; i++){
+  for(let i = 0; i <= a; i++){
     if(odd(i)) {
-      sum += i;
+      sum = sum + i;
     }
   }
   return sum
@@ -372,24 +372,29 @@ Q3 Ans - string to array conversion
 function myFunction() {
   var str = "How are you doing today?";
   var res = str.split(" ");
-  console.log(typeof(res)); // object
   console.log(res); // ["How", "are", "you", "doing", "today?"]
 }
+var arr = ["How", "are", "you", "doing", "today?"]
+console.log(typeof(arr)); // object
 -----------------------
 Q4 ans - array to string conversion 
 function myFunction() {
   var fruits = ["Banana", "Orange", "Apple", "Mango"];
   var x = fruits.toString();
-  console.log(x);
-} // "Banana", "Orange", "Apple", "Mango"
+  console.log(x); // "Banana", "Orange", "Apple", "Mango"
+} 
 -----------------------------------
 Q5. converting object to array
 var obj = {"name":"john","age":27,"salary":60000}
-var result = Object.keys(obj).map(function(key) {
-  return [key, obj[key]];
+var result = Object.keys(obj).map(items => {
+  return [items, obj[items]]; // items return keys and obj[items] return values.
 });
-
 console.log(result); // [Array ["name", "john"], Array ["age", 27], Array ["salary", 60000]]
+or 
+var obj = {"name":"john","age":27,"salary":60000}
+Object.keys(obj).map(items => {
+  console.log( [items, obj[items]]);
+});
 ----------------
 Q6. converting array to object -
 var arr = [1,'2','san',null];
@@ -397,27 +402,23 @@ var x = Object.assign({}, arr);
 console.log(x); // Object { 0: 1, 1: "2", 2: "san", 3: null }
 -----------------------
 Q7. check an array for null or undefined values -
-The some() method tests whether at least one element in the array passes the test.
-var arr = [null, 2, null, null];
-var otherThanNull = arr.some(function (arg) {
-    return arg !== null;
-}); 
-console.log(otherThanNull); // true
+
 ----------------------
 Q8. checking for empty array -
-var array = [null,undefined];
+var array = [null,undefined]; | if array = [] // empty
 if (array && array.length) {   
    console.log('not empty');
 } else {
    console.log('empty');
-} // not empty | if array = [] // empty
+} // not empty 
 -----------------------
 Q9. checking duplicate value in array -
 1st way
-let array1 = [3,5,6,7,8,13,8,6];
-function dublicateFunction(array) { 
-return array.filter( (item,i) => array.indexOf(array[i]) !== i); }
-console.log(dublicateFunction(array1));// [6,8]
+let array1 = [5,6,7,8,13,8,6];
+function dublicateFunction(arg) { 
+	return arg.filter( (item,i) => arg.indexOf(arg[i]) !== i); 
+}
+console.log(dublicateFunction(array1));// [8,6]
 
 2nd way -
 function test(arr){
@@ -479,20 +480,20 @@ console.log(6+4 + "4" + 9+9+2+"2"+5); //"10499225"
 Q11. closures 
 displayName doesn’t define any local variables, 
 yet it is able to alert name because name has been defined in the scope in which the closure was created — that of its outer function.
-Note :- Closures are useful because they let you associate some data (the lexical environment) with a function that operates on that data.
-function pam() {
-    var name = "Pam Beesly";
+Note - Closures are useful because they let you associate some data with a function that operates on that data.
+function myName() {
+    var name = "Piter Pan"; // outer func. variable
     function displayName() {
-        alert (name);
+        alert (name); // no inner func var but it can access name;
     }
     function setName(newName) {
         name = newName;
     }
     displayName();
-    setName("Pam Halpert");
+    setName("Piter England");
     displayName();
 }
-pam();
+myName();
 ===== 
 calling inner func through outer fun variable
 function makeFunc() {
@@ -505,3 +506,5 @@ function makeFunc() {
 
 var myFunc = makeFunc(); // outer func. variable.
 myFunc();
+-------------------
+Q12. var str = "india" // print all vowels in a string?
