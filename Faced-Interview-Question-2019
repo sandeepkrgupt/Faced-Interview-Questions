@@ -285,12 +285,44 @@ const fruits = {
 const obj1 = Object.entries(fruits);
 console.log(obj1) // Array [Array ["apple", 28], Array ["orange", 17], Array ["pear", 54]]
 
-Object.defineProperty() -
-The static method Object.defineProperty() defines a new property directly on an object or empty object,
+V. Object.defineProperty - 
 
-const fruits = {};
-const newFruits = Object.defineProperty(fruits, 'property1'{
-  name: 'Mango',
-  price:100
-})
-console.log(newFruits); // Mango
+Changing a Property Valuebject.defineProperty() -
+The static method Object.defineProperty() defines a new property 
+directly on an object or empty object,
+
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  language : "EN"
+};
+
+// Change a property
+Object.defineProperty(person, "language", {value : "NO"});
+Vi. 
+The Object.freeze() method freezes an object. A frozen object can no longer be changed; 
+freezing an object prevents new properties from being added to it, existing properties from being removed, onst fruits = {};
+
+const obj = {
+  prop: 42
+};
+
+Object.freeze(obj);
+
+obj.prop = 33;
+// Throws an error in strict mode
+
+console.log(obj.prop);
+// expected output: 42
+Vii Object.seal - 
+The Object.seal() method seals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. 
+Values of present properties can still be changed as long as they are writable.
+
+const object1 = {
+  property1: 42
+};
+
+Object.seal(object1);
+object1.property1 = 33;
+console.log(object1.property1);
+// expected output: 33
