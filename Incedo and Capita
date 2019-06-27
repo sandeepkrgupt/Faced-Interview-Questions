@@ -1,7 +1,7 @@
 -------------------------------------------------
 -----------Incedo and Capita --------------------
 
-Q1 Ans - we can get array items instead of setTimeout is zero.
+Q1 Ans - we can get array items despite setTimeout is zero.
 var arr = [1,2,3,4,5,0]; 
 for (var i = 0; i < arr.length; i++) {
   setTimeout(function() {
