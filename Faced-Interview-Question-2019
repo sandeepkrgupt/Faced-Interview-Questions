@@ -532,3 +532,15 @@ Q13 datatype in js
 There are 7 types of datatypes. 
 Number, string, boolean, array, objects, null, undefined. 
 
+---------------
+How to check palindrome string (e.g - radar) in javascript? 
+
+var string = 'radar' ;
+var x = string.split('').reverse().join('')
+console.log (x) ;
+if (x === string) {
+console.log ('true') ;
+} else {
+console.log ('false') ;
+} 
+
