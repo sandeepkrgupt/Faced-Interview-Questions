@@ -508,3 +508,9 @@ var myFunc = makeFunc(); // outer func. variable.
 myFunc();
 -------------------
 Q12. var str = "india" // print all vowels in a string?
+
+--------------
+Q13 datatype in js
+There are 7 types of datatypes. 
+Number, string, boolean, array, objects, null, undefined. 
+
