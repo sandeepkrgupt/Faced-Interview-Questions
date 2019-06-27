@@ -1,0 +1,237 @@
+-------------------------------------------------
+-----------Incedo and Capita --------------------
+
+Q1 Ans - we can get array items instead of setTimeout is zero.
+var arr = [1,2,3,4,5,0]; 
+for (var i = 0; i < arr.length; i++) {
+  setTimeout(function() {
+    console.log(arr[i]);
+  },0)
+};
+// output 1,2,3,4,5,0
+second example -
+var arr = ['kevin', 'mike', 'sally',];
+arr.forEach(function(person){
+  setTimeout(function(){
+    console.log(person);
+  },0);    
+}); 
+when setTimeout is zero it will immediately print the output.
+
+----------------------------
+Q2 Ans - Finding the sum of n odd numbers -
+// Method to check if a number is odd
+function odd(n){
+  return (n%2) // returing boolean value (0,1)
+}
+//Method to find sum of odd numbers till n
+function findSum(a) {
+  let sum = 0;
+  for(let i = 0; i <= a; i++){
+    if(odd(i)) {
+      sum = sum + i;
+    }
+  }
+  return sum
+}
+var x = findSum(10);
+console.log('sum is -' , x)// 25
+//or
+console.log(`sum is ${findSum(10)}`)  //25
+------------------------------------
+Q3 Ans - string to array conversion 
+function myFunction() {
+  var str = "How are you doing today?";
+  var res = str.split(" ");
+  console.log(res); // ["How", "are", "you", "doing", "today?"]
+}
+var arr = ["How", "are", "you", "doing", "today?"]
+console.log(typeof(arr)); // object
+-----------------------
+Q4 ans - Return the value of a String object:
+var str = "Hello World!";
+var res = str.toString();
+
+console.log(res);
+// expected output: Hello World!
+-----------------------------------
+Q5. converting object to array
+var obj = {"name":"john","age":27,"salary":60000}
+var result = Object.keys(obj).map(items => {
+  return [items, obj[items]]; // items return keys and obj[items] return values.
+});
+console.log(result); // [Array ["name", "john"], Array ["age", 27], Array ["salary", 60000]]
+or 
+var obj = {"name":"john","age":27,"salary":60000}
+Object.keys(obj).map(items => {
+  console.log( [items, obj[items]]);
+});
+----------------
+Q6. converting array to object -
+var arr = [1,'2','san',null];
+var x = Object.assign({}, arr);
+console.log(x); // Object { 0: 1, 1: "2", 2: "san", 3: null }
+-----------------------
+Q7. check an array for null or undefined values -
+
+----------------------
+Q8. checking for empty array -
+var array = [null,undefined]; | if array = [] // empty
+if (array && array.length) {   
+   console.log('not empty');
+} else {
+   console.log('empty');
+} // not empty 
+-----------------------
+Q9. checking duplicate value in array -
+1st way
+let array1 = [5,6,7,8,13,8,6];
+function dublicateFunction(arg) { 
+	return arg.filter( (item,i) => arg.indexOf(arg[i]) !== i); 
+}
+console.log(dublicateFunction(array1));// [8,6]
+
+2nd way -
+function test(arr){
+	//var result = [];
+	for (var i = 0; i < arr.length-1; i++){
+		for (var j = i+1; j < arr.length; j++){
+			if (arr[i] == arr[j]){
+				console.log(arr[i]); // -2,4
+				//result.push(arr[i]);
+			}
+		}
+	}
+	//return result;
+}
+test([1, 2, -2, 4, 5, 4, 7, 8, -2, 6]);
+// if you use return then
+console.log(test([1, 2, -2, 4, 5, 4, 7, 8, -2, 6])); // [-2,4]
+----------------------------------
+Q9. output of below with var and let will be same
+let arr = [1,2,5,4,15];
+for (let i=0; i<arr.length; i++) {
+	console.log(arr[i]); // 1,2,5,4,15
+} 
+-----------------------
+Q10. difference between let and var -
+function varTest() {
+  var x = 1;
+  if (true) {
+    var x = 2;  // same variable!
+    console.log(x);  // 2
+  }
+  console.log(x);  // 2
+}
+varTest();
+============
+function letTest() {
+  let x = 1;
+  if (true) {
+    let x = 2;  // different variable
+    console.log(x);  // 2
+  }
+  console.log(x);  // 1
+}
+letTest();
+----------------------
+what will be the output of below -
+function sum(a,b) {
+	console.log(a+b);
+}
+
+sum(2+4+"4"+1+2,5+8+null+"1+3"); //  "6412131+3"
+----
+console.log(6+4 + "4" + 9+9+2+'ert'+5); // "104992ert5"
+----
+console.log(6+4 + "4" + 9+9+2+'ert'+5 -3); // "NAN"
+----
+console.log(6+4 + "4" + 9+9+2+"2"+5); //"10499225"
+---------------------------------
+Q11. closures 
+displayName doesn’t define any local variables, 
+yet it is able to alert name because name has been defined in the scope in which the closure was created — that of its outer function.
+Note - Closures are useful because they let you associate some data with a function that operates on that data.
+function myName() {
+    var name = "Piter Pan"; // outer func. variable
+    function displayName() {
+        alert (name); // no inner func var but it can access name;
+    }
+    function setName(newName) {
+        name = newName;
+    }
+    displayName();
+    setName("Piter England");
+    displayName();
+}
+myName();
+===== 
+calling inner func through outer fun variable
+function makeFunc() {
+  var name = 'Mozilla';
+  function displayName() {
+    alert(name);
+  }
+  return displayName;
+}
+
+var myFunc = makeFunc(); // outer func. variable.
+myFunc();
+-------------------
+Q12. var str = "india" // print all vowels in a string?
+
+--------------
+Q13 datatype in js
+There are 7 types of datatypes. 
+Number, string, boolean, array, objects, null, undefined. 
+
+---------------
+How to check palindrome string (e.g - radar) in javascript? 
+
+var string = 'radar' ;
+var x = string.split('').reverse().join('')
+console.log (x) ;
+if (x === string) {
+console.log ('true') ;
+} else {
+console.log ('false') ;
+} 
+-------(((----()))) - - - 
+Join two arrays or strings? 
+
+var arr1 = [0, 1, 2];
+var arr2 = [3, 5, 7];
+var primes = arr1.concat(arr2);
+
+-----------((()))) - - - 
+
+How to convert Array elements into string 
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var energy = fruits.join();
+console.log (energy) //"Banana,Orange,Apple,Mango"
+
+------------------------------------
+return all array elements greater then 10.
+
+var numbers = [3, 10, 18, 20,33,21,11];
+function checkArray() {
+   for (let i =0; i<numbers.length; i++) {
+       if(numbers[i] >10) {
+          console.log(numbers[i])
+       }
+   }
+}
+checkArray();
+----------
+find() -The find() method returns the value of the first element in an array that pass a test.
+var ages = [3, 10, 18, 20];
+
+function checkAdult(age) {
+  return age >= 16;
+}
+console.log( ages.find(checkAdult)); // 18
+
+
+
+
