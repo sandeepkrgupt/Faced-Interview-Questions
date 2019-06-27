@@ -395,12 +395,12 @@ function myFunction() {
 var arr = ["How", "are", "you", "doing", "today?"]
 console.log(typeof(arr)); // object
 -----------------------
-Q4 ans - array to string conversion 
-function myFunction() {
-  var fruits = ["Banana", "Orange", "Apple", "Mango"];
-  var x = fruits.toString();
-  console.log(x); // "Banana", "Orange", "Apple", "Mango"
-} 
+Q4 ans - Return the value of a String object:
+var str = "Hello World!";
+var res = str.toString();
+
+console.log(res);
+// expected output: Hello World!
 -----------------------------------
 Q5. converting object to array
 var obj = {"name":"john","age":27,"salary":60000}
