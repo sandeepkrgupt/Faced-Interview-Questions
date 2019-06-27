@@ -558,5 +558,27 @@ var fruits = ["Banana", "Orange", "Apple", "Mango"];
 var energy = fruits.join();
 console.log (energy) //"Banana,Orange,Apple,Mango"
 
+------------------------------------
+return all array elements greater then 10.
+
+var numbers = [3, 10, 18, 20,33,21,11];
+function checkArray() {
+   for (let i =0; i<numbers.length; i++) {
+       if(numbers[i] >10) {
+          console.log(numbers[i])
+       }
+   }
+}
+checkArray();
+----------
+find() -The find() method returns the value of the first element in an array that pass a test.
+var ages = [3, 10, 18, 20];
+
+function checkAdult(age) {
+  return age >= 16;
+}
+console.log( ages.find(checkAdult)); // 18
+
+
 
 
