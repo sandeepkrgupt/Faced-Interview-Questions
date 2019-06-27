@@ -543,4 +543,20 @@ console.log ('true') ;
 } else {
 console.log ('false') ;
 } 
+-------(((----()))) - - - 
+Join two arrays or strings? 
+
+var arr1 = [0, 1, 2];
+var arr2 = [3, 5, 7];
+var primes = arr1.concat(arr2);
+
+-----------((()))) - - - 
+
+How to convert Array elements into string 
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var energy = fruits.join();
+console.log (energy) //"Banana,Orange,Apple,Mango"
+
+
 
