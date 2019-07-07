@@ -76,7 +76,46 @@ Ans -
 In React, all DOM properties and attributes (including event handlers) should be camelCased. For example, 
 the HTML attribute tabindex corresponds to the attribute tabIndex in React. 
 The exception is aria-* and data-* attributes, which should be lowercased. For example, you can keep aria-label as aria-label.
------------------------------------
+
+============== Wipro ============
+1. const ele = <h1>Hello, India</h1>
+ReactDOM.render(ele, document.getElementById('root'));
+output ?
+Ans -
+
+2. what is set method used in javascript ?
+Ans -
+
+3. How to clone branch in git and merge your code and push to main branch ?
+Ans -
+
+4. Draw a circle and show it in center of your page?
+Ans -
+
+5. how to return random item from Array?
+Ans -
+
+6. var arr = [3,4,5,6]
+for (let i=0; i<arr.length; i++) {
+  console.log(i) // output ?
+}
+Ans -
+
+7. write a test case to check if a romponent is rendered/loaded successfully ?
+Ans -
+
+8. what will output if we call another render inside setTimeout in a render method?
+Ans -
+
+9. what is event.delegate in javascript ?
+Ans -
+
+10. is javacript loosily type or stirct type?
+Ans -
+
+11. Features of using Javascript?
+Ans-
+
 
 
 
