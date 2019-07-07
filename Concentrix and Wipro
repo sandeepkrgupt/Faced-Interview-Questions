@@ -102,25 +102,100 @@ Ans -
 
 4. Draw a circle and show it in center of your page?
 Ans -
-
+show circular div in center
+div {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+  background-color:red;
+  border-radius:50%;
+}
+Another Way :-
+div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+Another Way ;-
+div{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+------------------------------------
 5. how to return random item from Array?
 Ans -
-
+var items = [21, 33, 42];
+console.log(items[Math.floor(Math.random()*items.length)]);
+------------------------------------
 6. var arr = [3,4,5,6]
 for (let i=0; i<arr.length; i++) {
   console.log(i) // output ?
 }
-Ans -
+Ans - [0,1,2,3]
 
 7. write a test case to check if a romponent is rendered/loaded successfully ?
 Ans -
-
-8. what will output if we call another render inside setTimeout in a render method?
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { configure, shallow } from 'enzyme';
+import { expect } from 'chai';
+import App from './App';
+import Adapter from 'enzyme-adapter-react-16'
+configure({ adapter: new Adapter() });
+describe('App component testing', function() {
+  it('renders welcome message', function() {
+    const wrapper = shallow(<App />); 
+    const welcome = <h1 className='App-title'>Welcome to React</h1>;
+    expect(wrapper.contains(welcome)).to.equal(true);
+  });
+});
+------------------------------------------
+8. what will output if we call multiple ReactDOM.render(), we call another render inside setTimeout in a render method?
 Ans -
-
+class App extends React.Component {
+  render() {
+    return (<div>Morning</div>)
+  }
+}
+class Demo extends React.Component {
+  render() {
+    return (<div>Evening</div>)
+  }
+}
+React.render(<App/>, document.getElementById('app'));
+React.render(<Demo/>, document.getElementById('app')); // final output is Evening
+----------------------
+class App extends React.Component {
+  render() {
+    return (<div>Morning</div>)
+    return (<div>Evening</div>)
+  }
+}
+React.render(<App/>, document.getElementById('app')); // Morning
+-----------------------------------------------------------
 9. what is event.delegate in javascript ?
 Ans -
-
+DOM event delegation is a mechanism of responding to ui-events via a single 
+common parent rather than each child, through the magic of event "bubbling"
+<ul onclick="alert(event.type + '!')">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+event bubbling -
+it bubble an event from bottom to top.
+event starts are the element that triggered it (saying, changing the #email field in our example above). 
+Then, it bubbles up to each of it’s parent elements until it reaches the html element.
+------------------------------------------------------------
 10. is javacript loosily type or stirct type?
 Ans -
 Loosely typed" means language does not bother with types too much, and does conversions automatically, 
@@ -129,7 +204,17 @@ JavaScript is both dynamically and loosely typed langua
 
 11. Features of using Javascript?
 Ans-
-
+1. Client – Side Technology
+2. Greater Control
+3. Detecting the User’s Browser and OS.
+4. Performing Simple Calculation on the Client side
+5. Validating The User’s Input
+6. Handling Date and time
+7. Generating HTML on the Fly
+Every time you click on the button, the browser generates and displays a new HTML code. 
+Thanks to JavaScript, this operation performs on the client- machine and therefore 
+you don’t have to wait while the information backs and forth between your browser and the web server.
+-----------------------------------------------------------------
 12. what will be the output if we use multiple return in one render ?
 Ans -
 class App extends React.Component {
