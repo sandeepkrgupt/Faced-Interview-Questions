@@ -1,5 +1,5 @@
 Concentrix -
-How can we make n no of divs of same size for any amount of content /
+1. How can we make n no of divs of same size for any amount of content /
 Ans -
 <style>
 .col-container {
@@ -45,7 +45,7 @@ Ans -
 }
 </style>
 -----------------------------------
-How to render react components differently on diff. OS (let say need to show hide)
+2. How to render react components differently on diff. OS (let say need to show hide)
 Ans -
 You can conditionally render some elements in react-native based on whichever platform the app is running on.
 render(){
@@ -63,10 +63,20 @@ render(){
 }
 You can also use JS property - navigator.platform
 ------------------------------------
-why :not used in css
+3. why :not used in css
 Ans -
 Set a background color for all elements that are not a <p> element
 :not(p) {
   background: #ff0000;
 }
 will apply background all tags except p tag.
+-----------------------------------
+React DOM Manupulation?
+Ans -
+In React, all DOM properties and attributes (including event handlers) should be camelCased. For example, 
+the HTML attribute tabindex corresponds to the attribute tabIndex in React. 
+The exception is aria-* and data-* attributes, which should be lowercased. For example, you can keep aria-label as aria-label.
+-----------------------------------
+
+
+
