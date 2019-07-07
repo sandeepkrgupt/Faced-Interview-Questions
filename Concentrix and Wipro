@@ -78,14 +78,25 @@ the HTML attribute tabindex corresponds to the attribute tabIndex in React.
 The exception is aria-* and data-* attributes, which should be lowercased. For example, you can keep aria-label as aria-label.
 
 ============== Wipro ============
+
 1. const ele = <h1>Hello, India</h1>
 ReactDOM.render(ele, document.getElementById('root'));
 output ?
 Ans -
-
+class App extends React.Component {
+  render() {
+    return (<div>Morning</div>)
+  }
+}
+var ele = <h1>hello, india</h1>
+React.render(ele, document.getElementById('app')); // Hello, India
+-----------------------------------------
 2. what is set method used in javascript ?
-Ans -
-
+Ans - set is used to return values in array and ignore the duplicate values.
+const ages = [26, 27, 26, 26, 28, 28, 29, 29, 30]
+const uniqueAges = [...new Set(ages)]
+console.log(uniqueAges) //Array [26, 27, 28, 29, 30]
+---------------------------------------
 3. How to clone branch in git and merge your code and push to main branch ?
 Ans -
 
@@ -112,9 +123,25 @@ Ans -
 
 10. is javacript loosily type or stirct type?
 Ans -
+Loosely typed" means language does not bother with types too much, and does conversions automatically, 
+i.e. you can easily add string to an integer and get the result as a string (or even as integer in some languages like Perl).
+JavaScript is both dynamically and loosely typed langua
 
 11. Features of using Javascript?
 Ans-
+
+12. what will be the output if we use multiple return in one render ?
+Ans -
+class App extends React.Component {
+  render() {
+    return (<div>Morning</div>)
+    return (<div>Noon</div>)
+    return (<div>Evening</div>)
+  }
+}
+React.render(<App />, document.getElementById('app')); // Morning
+----------------------------------
+
 
 
 
