@@ -1,0 +1,72 @@
+Concentrix -
+How can we make n no of divs of same size for any amount of content /
+Ans -
+<style>
+.col-container {
+  display: table;
+  width: 100%;
+}
+.col {
+  display: table-cell;
+  padding: 16px;
+}
+</style>
+<div class="col-container">
+  <div class="col" style="background:orange">
+    <p>Hello World</p>
+  </div>
+  <div class="col" style="background:yellow">
+    <h2>Column 2</h2>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+  </div>
+  <div class="col" style="background:orange">
+    <h2>Column 3</h2>
+    <p>Some other text..</p>
+  </div>
+</div>
+--------Another Way --------
+<style>
+.col-container  {
+  width:100%;
+  height:auto;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  flex-flow:wrap;
+}
+.col {
+  width:25%;
+  height:200px;
+  margin:10px;
+  box-size:border-box;
+}
+</style>
+-----------------------------------
+How to render react components differently on diff. OS (let say need to show hide)
+Ans -
+You can conditionally render some elements in react-native based on whichever platform the app is running on.
+render(){
+    if(Platform.OS === 'android'){
+        return(
+           <View><Text>Android</Text></View>
+        )
+    };
+
+    if(Platform.OS === 'ios'){
+        return(
+           <View><Text>IOS</Text></View>
+        )
+    };
+}
+You can also use JS property - navigator.platform
+------------------------------------
+why :not used in css
+Ans -
+Set a background color for all elements that are not a <p> element
+:not(p) {
+  background: #ff0000;
+}
+will apply background all tags except p tag.
