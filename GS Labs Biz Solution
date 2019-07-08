@@ -1,1 +1,24 @@
-hi
+Gs Labs :-
+1. what is async await used for ?
+Ans -
+An async function can contain an await expression that pauses the execution of 
+the async function and waits for the passed Promise's resolution, 
+and then resumes the async function's execution and returns the resolved value. 
+Remember, the await keyword is only valid inside async functions.
+
+function scaryClown() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('🤡');
+    }, 2000);
+  });
+}
+
+async function msg() {
+  const msg = await scaryClown();
+  console.log('Message:', msg);
+}
+
+msg(); // Message: 🤡 <-- after 2 seconds
+await is a new operator used to wait for a promise to resolve 
+--------------------------------
