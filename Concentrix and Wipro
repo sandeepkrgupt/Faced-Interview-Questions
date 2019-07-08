@@ -287,4 +287,20 @@ const redirectToLogin = () => {
   )
   // or history.push('/login') if your Login page is inside the same app
 }
+----------------------
+React 16.8 converting class comp. to functional comp.
+class App extends Component {
+  render() {
+    return (
+      // ...
+    );
+  }
+}
+To make it a functional component, change it to look more like this:
 
+const App = () => {
+  return (
+    // ...
+  )
+}
+------------------------------
