@@ -304,3 +304,30 @@ const App = () => {
   )
 }
 ------------------------------
+14. What is redux thunk ?
+Ans -
+Redux Thunk middleware allows you to write action creators that return a function instead of an action. 
+The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. 
+The inner function receives the store methods dispatch and getState as parameters.
+
+// index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+import App from './App';
+import rootReducer from './reducers';
+import { fetchGithubData } from './actions/index';
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+store.dispatch(fetchGithubData());
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>, document.getElementById('root'));
+    
+------------------------------------------------
