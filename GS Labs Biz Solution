@@ -6,19 +6,21 @@ the async function and waits for the passed Promise's resolution,
 and then resumes the async function's execution and returns the resolved value. 
 Remember, the await keyword is only valid inside async functions.
 
-function scaryClown() {
+function resolveAfter2Seconds() {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve('🤡');
+      resolve('resolved');
     }, 2000);
   });
 }
 
-async function msg() {
-  const msg = await scaryClown();
-  console.log('Message:', msg);
+async function asyncCall() {
+  console.log('calling');
+  var result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: 'resolved'
 }
 
-msg(); // Message: 🤡 <-- after 2 seconds
-await is a new operator used to wait for a promise to resolve 
+asyncCall();
+
 --------------------------------
