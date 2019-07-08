@@ -83,13 +83,8 @@ The exception is aria-* and data-* attributes, which should be lowercased. For e
 ReactDOM.render(ele, document.getElementById('root'));
 output ?
 Ans -
-class App extends React.Component {
-  render() {
-    return (<div>Morning</div>)
-  }
-}
 var ele = <h1>hello, india</h1>
-React.render(ele, document.getElementById('app')); // Hello, India
+React.render(ele, document.getElementById('root')); // Hello, India
 -----------------------------------------
 2. what is set method used in javascript ?
 Ans - set is used to return values in array and ignore the duplicate values.
