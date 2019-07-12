@@ -1,0 +1,50 @@
+<script>
+//var numbers = [1,2,3,4,5];
+//console.log(i);
+let i;
+  for(let i = 0; i <=5; i++) {
+    console.log(i);
+  }
+console.log(i);
+</script>
+
+output = 
+0 , 1 , 2, 3, 4, 5
+--------------------------
+<script>
+//var numbers = [1,2,3,4,5];
+//console.log(i);
+var i;
+  for(var i = 0; i <=5; i++) {
+    console.log(i);
+  }
+console.log(i);
+</script>
+output -
+0, 1, 2, 3, 4, 5, 6
+
+-------------------------------
+<script>
+var numbers = [1,2,3,4,5];
+console.log(i);
+var i;
+  for(var i = 0; i <numbers.length; i++) {
+    console.log(i);
+  }
+console.log(i);
+</script>
+output -
+undefined,0,1,2,3,4,5
+-------------------------
+<script>
+let numbers = [1,2,3,4,5];
+console.log(i);
+var i;
+  for(let i = 0; i <numbers.length; i++) {
+    console.log(i);
+  }
+console.log(i);
+</script>
+output -
+undefined, 0,1,2,3,4,undefined
+------------------------------
