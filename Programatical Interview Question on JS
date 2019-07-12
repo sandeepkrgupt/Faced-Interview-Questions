@@ -38,13 +38,36 @@ undefined,0,1,2,3,4,5
 -------------------------
 <script>
 let numbers = [1,2,3,4,5];
-console.log(i);
+console.log(i); //undefined
 var i;
   for(let i = 0; i <numbers.length; i++) {
-    console.log(i);
+    console.log(i); // 0,1,2,3,4
   }
-console.log(i);
+console.log(i); //undefined
 </script>
-output -
-undefined, 0,1,2,3,4,undefined
 ------------------------------
+<script>
+var numbers = [1,2,3,4,5];
+function hi() {
+	console.log(numbers);
+  	for(var i = 0; i <numbers.length; i++) {
+    	console.log("=",i); // 0,1,2,3,4
+  	}
+console.log(numbers);// [1,2,3,4,5]
+console.log("=>",i);// 5
+}
+hi()
+</script>
+-------------------------
+<script>
+let numbers = [1,2,3,4,5];
+function hi() {
+	console.log(numbers);
+  	for(let i = 0; i <numbers.length; i++) {
+    	console.log("=",i); // 0,1,2,3,4
+  	}
+console.log(numbers); // [1,2,3,4,5]
+console.log("=>",i); // i is not defined
+}
+hi()
+</script>
