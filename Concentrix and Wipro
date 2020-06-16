@@ -74,7 +74,7 @@ will apply background all tags except p tag.
 React DOM Manupulation?
 Ans -
 In React, all DOM properties and attributes (including event handlers) should be camelCased. For example, 
-the HTML attribute tabindex corresponds to the attribute tabIndex in React. 
+the HTML attribute tabindex or onchange corresponds to the attribute tabIndex or onChange in React. 
 The exception is aria-* and data-* attributes, which should be lowercased. For example, you can keep aria-label as aria-label.
 
 ============== Wipro ============
