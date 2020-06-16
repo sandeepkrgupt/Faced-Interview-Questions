@@ -166,8 +166,8 @@ class Demo extends React.Component {
     return (<div>Evening</div>)
   }
 }
-React.render(<App/>, document.getElementById('app'));
-React.render(<Demo/>, document.getElementById('app')); // final output is Evening
+ReactDOM.render(<App/>, document.getElementById('app'));
+ReactDOM.render(<Demo/>, document.getElementById('app')); // final output is Evening
 ----------------------
 class App extends React.Component {
   render() {
@@ -175,7 +175,7 @@ class App extends React.Component {
     return (<div>Evening</div>)
   }
 }
-React.render(<App/>, document.getElementById('app')); // Morning
+ReactDOM.render(<App/>, document.getElementById('app')); // Morning
 -----------------------------------------------------------
 9. what is event.delegate in javascript ?
 Ans -
