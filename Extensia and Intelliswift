@@ -125,7 +125,7 @@ obj.myFunc() // foo ... then... foo
 the major difference is that display: inline-block allows to set a width and height on the element. 
 Also, with display: inline-block , the top and bottom margins/paddings
 ------------------------
-Simple Closure Example -
+11.Simple Closure Example -
 function make_counter() {
   var counter = 0;
   return function() {
@@ -146,8 +146,11 @@ output - [1,36,49,81]
 No it's not necessary.
 fish = [ "piranha","cod", "eel" ];
 // Print out each item in the array
+let printFish = fish.map(individualFish => (<h1>individualFish</h1>); // auto returns
+Must Have to Return :-
+fish = [ "piranha","cod", "eel" ];
 let printFish = fish.map(individualFish => {
-    console.log(individualFish);
+    return <h1>individualFish</h1>
 });
 ----------------------------------
 3. what is HOC in js? give an example.
