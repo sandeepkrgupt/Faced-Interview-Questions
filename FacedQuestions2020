@@ -1,0 +1,133 @@
+1. Client side rendering vs server side rendering
+
+SSR: Server-Side Rendering - rendering a client-side or universal app to HTML on the server.
+CSR: Client-Side Rendering - rendering an app in a browser, generally using the DOM.
+
+2. how to show any row in red if it has an error in react
+3. how to do Ajex request
+
+AJAX is a developer's dream, because you can:
+
+Update a web page without reloading the page
+Request data from a server - after the page has loaded
+Receive data from a server - after the page has loaded
+Send data to a server - in the background
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+
+4. how to return any perticular data from json
+5. show data inside table using react.
+6. form validation in react.
+class Contactus extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      form: {
+        fullName: null,
+        email: null,
+      },
+      formErrors: {
+        name: "",
+        email: 
+      }
+    }
+    this.onSubmit = this.onSubmit.bind(this)
+  }
+  onSubmit() {
+    const { form } = this.state
+
+    Http.post('/contact-form', { data: form }).then((response) => {
+      console.log(response)
+      if (response.status === 'failed') {
+        this.setState({ formErrors: { name: 'error message' } })
+        const errors = response.data.errors
+        errors.map((error, key) => {
+          error.field === 'fullName'
+        }
+        )
+      }
+
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+  render() {
+    const props = this.props
+    const { form } = this.state
+    const { formErrors } = this.state
+    return (
+		<React.Fragment>
+              <form onSubmit={(e) => { e.preventDefault(); this.onSubmit(); }}>
+                <span>
+                  {formErrors.name !== '' && <p>Please enter Name</p>}
+                </span>
+                <label>
+                  Full Name:
+                  <input 
+				  type="text" 
+				  className="" name="name" 
+				  onChange={(e) => { this.setState({ form: { ...form, fullName: e.target.value } }) }} 
+				  />
+                </label>
+                <span>
+                  {formErrors.email !== '' && <p>Please enter valid email address</p>}
+                </span>
+				</form>
+		<React.Fragment>
+);
+
+Dependency Injection?
+Event looping?
+Ans - Event looping is javascript machenism to prioritise the task. for example
+console.log('start'); // Main Task
+setTimeOut(() => {
+console.log('timeout-1'); // second Task
+}, 0);
+setTimeOut(() => {
+console.log('timeout-2') // second Task
+}, 0);
+
+Promise.resolve().then(r => {console.log('promise-1)});
+console.log('End'); // main task
+output:-
+Start
+End
+promise-1
+timeout-1
+timeout-2
+
+Webpack?
+Ans: -
+It help us bundle and optimize diff files like js,css, jpg etc. we can add loader like babel, 
+css-loader to convert next gen js to old gen js or css.
+
+what may effect react app to load slow?
+event delegate
+map vs forEach
+how to make search to server on each character type (make a postback request)
+Ans: - using react lazy loading.
+import React, {lazy} from 'react';
+const myComp = lazy(() => import('./childComp'));
+class App extends React.Component() {
+render() {
+	return (
+		<div id="App">
+			<myComp />
+		</div>
+	)
+}
+}
