@@ -11,7 +11,7 @@ iv. Input Tags
 ---------------------------------------------------
 2. If we write <Footer> and then <Header> how will be displayed on UI?
 Ans :-
-First Footer will be displayed then Header. Sementic tags are used for crawling.
+Same. Sementic tags are used for crawling.
 --------------------------------------------------
 3. is setTimeout sync ?
 Ans :- No setTimeout is Async. So js compiler put it in diff. stack.
