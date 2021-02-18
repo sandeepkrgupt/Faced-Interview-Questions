@@ -14,7 +14,7 @@ Ans :-
 Same. Sementic tags are used for crawling.
 --------------------------------------------------
 3. is setTimeout sync ?
-Ans :- No setTimeout is Async. So js compiler put it in diff. stack.
+Ans :- No setTimeout is Async. So js compiler put it in diff. call stack.
 
 setTimeout(function(){
    console.log(x);
