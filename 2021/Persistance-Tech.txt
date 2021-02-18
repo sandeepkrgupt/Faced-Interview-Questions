@@ -9,7 +9,7 @@ iii. Graphic Tags
 iv. Input Tags
    color, date, email, month, range, datetime
 ---------------------------------------------------
-2. If we write <Footer> and then <Header> how will bw displayed on UI?
+2. If we write <Footer> and then <Header> how will be displayed on UI?
 Ans :-
 First Footer will be displayed then Header. Sementic tags are used for crawling.
 --------------------------------------------------
