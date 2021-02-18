@@ -4,7 +4,7 @@ i. Sementic Tags: -
    Header,Footer,aside,Section etc
 ii. Media tags
    Audio, Video
-iii. Media Tags
+iii. Graphic Tags
    Canvas, Svg
 iv. Input Tags
    color, date, email, month, range, datetime
@@ -65,3 +65,7 @@ Ans :- Symbol is a premitive data types means other type can't be stored like in
    let x = 5;
    console.log(x); // 5
   
+9. Css3 new properties.
+Ans :-
+animation, Background-image, background-attachment, border-radius, border-shadow, transition etc.
+
