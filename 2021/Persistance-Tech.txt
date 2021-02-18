@@ -33,6 +33,7 @@ Ans :- display properties
    
    **inline Vs block :-
    inline - Any height and width properties will have no effect like -<span>
+ 
    block - It starts on a new line, and takes up the whole width. like - <p>
    
    **flex : -
@@ -76,4 +77,8 @@ Ans :-
    3. Absolute
    4. Fixed
    5. Sticky (A sticky element toggles between relative and fixed according to user scrolling position).
+ 
+11. Css Selectors
+Ans :-
+ Class, Id, Element and Attribute Selectors.
  
