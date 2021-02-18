@@ -27,7 +27,7 @@ Ans :-
    In response to passing an ID as a prop, the component will send an AJAX request 
    and then in its render() method will check if the data is set in state -if so, render the contents.
 --------------------------------------------------------------------
-5. Css display and position properties?
+5. Css display properties?
 Ans :- display properties
    inline, block, flex, grid, table, inline-block, inline-flex, inline-table etc.
    
