@@ -1,11 +1,67 @@
 1. What all tags in HTML5?
+Ans : -
+i. Sementic Tags: -
+   Header,Footer,aside,Section etc
+ii. Media tags
+   Audio, Video
+iii. Media Tags
+   Canvas, Svg
+iv. Input Tags
+   color, date, email, month, range, datetime
+---------------------------------------------------
 2. If we write <Footer> and then <Header> how will bw displayed on UI?
+Ans :-
+First Footer will be displayed then Header. Sementic tags are used for crawling.
+--------------------------------------------------
 3. is setTimeout sync ?
+Ans :- No setTimeout is Async. So js compiler put it in diff. stack.
+
+setTimeout(function(){
+   console.log(x);
+}, 1000)
+var x = 5;
+console.log(x);
+--------------------------------------------
 4. can we do ajax call in render()?
+Ans :-
+   In response to passing an ID as a prop, the component will send an AJAX request 
+   and then in its render() method will check if the data is set in state -if so, render the contents.
+--------------------------------------------------------------------
 5. Css display and position properties?
+Ans :- display properties
+   inline, block, flex, grid, table, inline-block, inline-flex, inline-table etc.
+   
+   **inline Vs block :-
+   inline - Any height and width properties will have no effect like -<span>
+   block - It starts on a new line, and takes up the whole width. like - <p>
+   
+   **flex : -
+   Properties -
+   display: flex;
+   flex-direction: row | row-reverse | column | column-reverse;
+   flex-wrap: nowrap | wrap | wrap-reverse;
+   flex-flow: column wrap;
+   justify-content: flex-start | flex-end | center | space-between | space-around;
+   align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end;
+   align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end;
+   
+   **Flex Vs Grid
+   flexbox was designed for layout in one dimension - either a row or a column. 
+   Grid was designed for two-dimensional layout - rows, and columns at the same time.
+--------------------------------------------------------------
 6. Props Vs State, Difference?
-7. Flexbox?
-8. Symbols dataType in Js?
-9. console.log(x); // reference error
+Ans : -
+Props are used to pass data, whereas state is for managing data. 
+Data from props is read-only, and cannot be modified by a component that is receiving it from outside. 
+State data can be modified by its own component, but is private (cannot be accessed from outside)
+--------------------------------------------------------------
+7. Symbols dataType in Js?
+Ans :- Symbol is a premitive data types means other type can't be stored like in array we can store int,string datatypes so it is non-premitive.
+   const sym = Symbol('foo');
+   const sym1 = Symbol('foo'); 
+   sym === sym1 // false (Every value return from Symbol is unique).
+ ------------------------------------------------------------
+8. console.log(x); // reference error
    let x = 5;
    console.log(x); // 5
+  
