@@ -1,0 +1,11 @@
+1. What all tags in HTML5?
+2. If we write <Footer> and then <Header> how will bw displayed on UI?
+3. is setTimeout sync ?
+4. can we do ajax call in render()?
+5. Css display and position properties?
+6. Props Vs State, Difference?
+7. Flexbox?
+8. Symbols dataType in Js?
+9. console.log(x); // reference error
+   let x = 5;
+   console.log(x); // 5
