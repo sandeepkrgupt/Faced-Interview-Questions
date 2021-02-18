@@ -68,4 +68,12 @@ Ans :- Symbol is a premitive data types means other type can't be stored like in
 9. Css3 new properties.
 Ans :-
 animation, Background-image, background-attachment, border-radius, border-shadow, transition etc.
-
+----------------------------------------------------
+10. css position property
+Ans :-
+   1. static
+   2. relative
+   3. Absolute
+   4. Fixed
+   5. Sticky (A sticky element toggles between relative and fixed according to user scrolling position).
+ 
