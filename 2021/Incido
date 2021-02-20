@@ -34,3 +34,18 @@ console.log(x+y); // 300
 var a = 100;
 let a;
 console.log(a); // Identifier 'a' has already been declared
+-----------------------------------------------
+10. Array Unique Items?
+Ans :-
+1:-
+var myArray = ['a', 1, 'a', 2, '1'];
+
+let unique = [...new Set(myArray)];
+
+console.log(unique); // unique is ['a', 1, 2, '1']
+
+2:-
+// usage example:
+var myArray = ['a', 1, 'a', 2, '1'];
+var unique = myArray.filter((value, index, self) => self.indexOf(value) === index);
+console.log(unique); // unique is ['a', 1, 2, '1']
