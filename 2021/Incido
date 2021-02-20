@@ -3,9 +3,8 @@
 3. simple React component to increase and decrease value by 1.
 4. What happens when call setSate inside Render?
 5. how to store Ajax data in redux store?
-6. How to retiurn duplicate vallues of an array?
 ---------------------------------------------
-7. 
+6. 
 var p1 = {
 fname: 'San',
 getUserName: function(){
@@ -24,13 +23,13 @@ console.log(p2.fname); // John
   console.log(p1.lname); // false
 }())
 -------------------------------------------------
-8.
+7.
 let x = 100;
 let y = x;
 y = 200;
 console.log(x+y); // 300
 -------------------------------------------------
-9.
+8.
 var a = 100;
 let a;
 console.log(a); // Identifier 'a' has already been declared
