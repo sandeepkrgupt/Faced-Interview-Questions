@@ -75,6 +75,14 @@ console.log(x+y); // 300
 var a = 100;
 let a;
 console.log(a); // Identifier 'a' has already been declared
+____________
+a = 100;
+let a;
+console.log(a); // ReferenceError: Cannot access 'a' before initialization.
+__________
+a = 100;
+var a;
+console.log(a); // 100
 -----------------------------------------------
 10. Array Unique Items?
 Ans :-
