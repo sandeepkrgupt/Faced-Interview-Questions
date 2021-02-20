@@ -1,0 +1,40 @@
+1. How to find length of an object?
+Ans :-
+const obj = {
+name: 'A',
+value: 1
+}
+const lengthObj = Object.keys(obj).length // 2
+-------------------------------------------------
+2. How to remove element from Object?
+Ans :- using delete keyword
+syntax -
+delete Object_name.key_name
+e.g :-
+
+const obj = {
+name: 'A',
+value: 1
+}
+
+delete obj.value;
+console.log(obj) // {name: 'A'}
+--------------------------------------------
+3. Add, Replace, Delete item operations in Array.
+Ans : -
+for all above i.e Add, replace and delete we can use splice method.
+
+ADD :-
+const arr = [1,2,3,4]
+arr.splice(3,0,9);
+console.log(arr) // [1,2,3,9,4]
+___________
+Replace :-
+const arr = [1,2,3,4];
+arr.splice(1,1,5) 
+console.log(arr) // [1,5,3,4]
+__________
+Delete
+const arr = [1,2,3,4]
+arr.splice(2,1);
+console.log(arr) // [1,2,4]
