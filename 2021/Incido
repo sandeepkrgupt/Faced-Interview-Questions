@@ -1,0 +1,36 @@
+1. How to call a function declared outside of class inside class?
+2. What are the optional parameters of setState and when to use them?
+3. simple React component to increase and decrease value by 1.
+4. What happens when call setSate inside Render?
+5. how to store Ajax data in redux store?
+6. How to retiurn duplicate vallues of an array?
+---------------------------------------------
+7. 
+var p1 = {
+fname: 'San',
+getUserName: function(){
+	return this.fname;
+}
+}
+var p2 = p1;
+p2.fname = 'John';
+p2.lname = false;
+console.log(p2.fname); // John
+(function(){
+console.log(p1.fname); // John
+console.log(p1.lname); // false
+  
+console.log(p2.fname); // John
+  console.log(p1.lname); // false
+}())
+-------------------------------------------------
+8.
+let x = 100;
+let y = x;
+y = 200;
+console.log(x+y); // 300
+-------------------------------------------------
+9.
+var a = 100;
+let a;
+console.log(a); // Identifier 'a' has already been declared
