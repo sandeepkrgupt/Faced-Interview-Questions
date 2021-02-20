@@ -72,8 +72,12 @@ y = 200;
 console.log(x+y); // 300
 -------------------------------------------------
 8.
-var a = 100;
+var a;
+let a = 300;
+console.log(a); // Identifier 'a' has already been declared
+_________
 let a;
+var  a=300;
 console.log(a); // Identifier 'a' has already been declared
 ____________
 a = 100;
