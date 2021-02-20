@@ -102,3 +102,17 @@ console.log(unique); // unique is ['a', 1, 2, '1']
 var myArray = ['a', 1, 'a', 2, '1'];
 var unique = myArray.filter((value, index, self) => self.indexOf(value) === index);
 console.log(unique); // unique is ['a', 1, 2, '1']
+
+11. Find Duplicate items from array?
+Ans :-
+const yourArray = [1, 4, 2, 3, 4, 5, 5]
+let duplicates = []
+const tempArray = [...yourArray].sort(); // [1,2,3,4,4,5,5]
+for (let i = 0; i < tempArray.length; i++) {
+  if (tempArray[i + 1] === tempArray[i]) {
+    duplicates.push(tempArray[i])
+  }
+}
+
+console.log(duplicates) //[ 1, 5 ]
+
