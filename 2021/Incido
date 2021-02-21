@@ -88,7 +88,7 @@ a = 100;
 var a;
 console.log(a); // 100
 -----------------------------------------------
-10. Array Unique Items?
+9. Array Unique Items?
 Ans :-
 1:-
 var myArray = ['a', 1, 'a', 2, '1'];
@@ -97,7 +97,7 @@ let unique = [...new Set(myArray)];
 
 console.log(unique); // unique is ['a', 1, 2, '1']
 
-2:-
+10:-
 // usage example:
 var myArray = ['a', 1, 'a', 2, '1'];
 var unique = myArray.filter((value, index, self) => self.indexOf(value) === index);
@@ -115,4 +115,25 @@ for (let i = 0; i < tempArray.length; i++) {
 }
 
 console.log(duplicates) //[ 1, 5 ]
-
+-------------------------------------------
+12. Array reverse using for loop?
+Ans: -
+var arr = [1,2,34,4];
+function reverse(items) {
+var newArr = [];
+for(let i = items.length-1; i>=0;i--) {
+newArr.push(items[i])
+}
+var result = reverse(arr);
+console.log(result);
+------------------------------------------
+12. Passing props from A to C without passing to B.
+Ans : -
+Using either Context
+using Local or Session Storage.
+------------------------------------------
+13. 
+if(true === 1) {console.log('h1');} // it won't go inside if (values are of diff types) 
+if(true == 1) {console.log('h1');} // hi ( true is converted to 1)
+}
+}
