@@ -1,4 +1,6 @@
 1. How to call a function declared outside of class inside class?
+Ans - 
+we can direct call a outsider function inside react class/component.
 --------------------------------------------------------
 2. What are the optional parameters of setState and when to use them?
 Ans :-
