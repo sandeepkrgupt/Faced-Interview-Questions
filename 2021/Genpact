@@ -1,0 +1,22 @@
+1. Array item Reverse?
+Ans :-
+function reverseArr(items) {
+    var rev = [];
+    for(var i = items.length-1; i >= 0; i--) {
+        rev.push(items[i]);
+    }
+    return rev;
+}
+
+var arr = [3,5,7,8]
+var result = reverseArr(arr);
+console.log(result);
+
+2. Passing props from A to C where B is child of A and Parent of C and donot pass props in B.
+Ans : -
+Using either Context
+or using Local or Session Storage.
+
+3. 
+if(true === 1) {console.log('h1');} // it won't go inside if (values are of diff types) 
+if(true == 1) {console.log('h1');} // hi ( true is converted to 1)
