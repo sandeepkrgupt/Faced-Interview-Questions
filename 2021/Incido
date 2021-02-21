@@ -45,6 +45,10 @@ class App extends Component {
 export default App;
 ------------------------------------------------
 4. What happens when call setSate inside Render?
+Ans - IT WILL STUCK INSIDE INFINITY LOOP.
+You can not set state inside render function because it will cause side effect. 
+What exactly happens is that each time you update state react calls render function, 
+so if you will update state inside render function then it will stuck inside infinite loop
 -----------------------------------------------
 5. how to store Ajax data in redux store?
 ---------------------------------------------
