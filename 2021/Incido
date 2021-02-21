@@ -127,13 +127,47 @@ newArr.push(items[i])
 var result = reverse(arr);
 console.log(result);
 ------------------------------------------
-12. Passing props from A to C without passing to B.
+13. Passing props from A to C without passing to B.
 Ans : -
 Using either Context
 using Local or Session Storage.
 ------------------------------------------
-13. 
+14. 
 if(true === 1) {console.log('h1');} // it won't go inside if (values are of diff types) 
 if(true == 1) {console.log('h1');} // hi ( true is converted to 1)
-}
-}
+------------------------------------------
+15. React useMemo ?
+Ans :-
+If you have a component that doesn't have props or state changing,
+You don't need to render it again. For preventing the component to re-render we use useMemo.
+Syntax-
+const any_Name = useMemo(() => {
+ return <ChildComp />
+}, []);
+------------------------------------------
+16. what is synthetic event or browser compatbility event?
+Ans -
+If you have some events that calls asynchronously, then you can call persist() before that event to work as synchronous.
+That is known as synthetic events.
+-------------------------------------------
+17. Why Redux Reducer is a pure function ?
+Ans -
+Because if they are given the same input, they will always produce the same result output. 
+This property helps with situations like unit testing, 
+because you know if a test passes once, it will always pass.
+-------------------------------------------
+18. Redux is Async ? Why Middleware are used?
+Ans -
+Redux's actions are dispatched synchronously, 
+which is a problem for any app that needs to communicate with an external API or perform side effects. 
+Redux also allows for middleware to work Asynchronously.
+Note :- Middleware helps redux to work asynchronously.
+-----------------------------------------------
+19. what is a patch method used for?
+Ans -
+PATCH method is a request method supported by the HTTP protocol for making partial changes to an existing resource.
+-----------------------------------------------
+20. URI Vs URL?
+Ans :-
+They are not exactly the same. A URI is an identifier of a specific resource. 
+Like a page, or book, or a document. A URL is special type of identifier that also tells you how to access it, such as HTTPs , FTP , etc
