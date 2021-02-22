@@ -1,6 +1,6 @@
 InnovationM
 
-1. what are peremeters in useEffect. What is second Parameter used for. What is second parameter is black array.
+1. what are peremeters in useEffect. What is second Parameter used for. What if second parameter is black array.
 Ans -
 If you omit it, effect will be executed after every render. 
 If you want effect to be executed only on first render, you can pass an empty array. Dependencies can be state or props.
