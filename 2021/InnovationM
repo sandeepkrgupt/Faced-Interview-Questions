@@ -1,0 +1,34 @@
+InnovationM
+
+1. what are peremeters in useEffect. What is second Parameter used for. What is second parameter is black array.
+---------------------------------------------
+2. React.memo Vs useMemo?
+---------------------------------------------
+3. useCallback Hook in react?
+---------------------------------------------
+4. what is key used in react?
+---------------------------------------------
+5. bindActionCreator() in redux?
+Ans -
+If there are many Actions written we can bind them using bindActionCreator.
+------------------------------------------------
+6. is Promise Async? what if there are many ajax call and some of them get fail?
+7. what is prototype in Javascript?
+8. Redux component and redux flow?
+-----------------------------------------------
+9. Sementic tags advantages ?
+Ans -
+Better search engine rankings.
+More maintainable code.
+Easier code to style with CSS.
+More accessible code for blind and partially sighted users
+------------------------------------------------
+10. DOCTYPE ?
+Ans - what version of HTML page is written in.
+first line of code required in every HTML or XHTML document. 
+The DOCTYPE declaration is an instruction to the web browser about what version of HTML the page is written in.
+-------------------------------------------
+9. can we use componentDidMount in functional component?
+Ans -
+The React hook useEffect helps in adding componentDidUpdate and componentDidMount combined lifecycle in React's functional component. 
+So far we know we can add lifecycle methods in stateful component only
