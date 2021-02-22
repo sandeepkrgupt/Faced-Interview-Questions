@@ -8,6 +8,8 @@ iii. Graphic Tags
    Canvas, Svg
 iv. Input Tags
    color, date, email, month, range, datetime
+   Form Elements-
+  Some of them are <datalist>, <keygen>, <output>, <progress> and <meter>.
 ---------------------------------------------------
 2. If we write <Footer> and then <Header> how will be displayed on UI?
 Ans :-
