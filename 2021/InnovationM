@@ -51,4 +51,7 @@ The DOCTYPE declaration is an instruction to the web browser about what version 
 Ans -
 The React hook useEffect helps in adding componentDidUpdate and componentDidMount combined lifecycle in React's functional component. 
 So far we know we can add lifecycle methods in stateful component only.
-
+-------------------------------------------
+10. How to claer cache in Js?
+Ans -
+delete() can be used for new chrome, firefox and opera.
