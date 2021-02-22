@@ -45,3 +45,8 @@ c={key:'c'};
 a[b]=123;
 a[c]=456;
 console.log(a[b]); //456
+-------------------------------------------
+console.log(1+"2"+"3"); //123
+console.log(1++"2"+"3"); //123
+console.log(1++); //Invalid left-hand side expression in postfix operation
+console.log(1++2); // Invalid left-hand side expression in postfix operation
