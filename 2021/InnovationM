@@ -55,3 +55,5 @@ So far we know we can add lifecycle methods in stateful component only.
 10. How to claer cache in Js?
 Ans -
 delete() can be used for new chrome, firefox and opera.
+ It stores program instructions and data that are used repeatedly in the operation.
+ Caching can reduce the load on your database, and protect it from slower.
