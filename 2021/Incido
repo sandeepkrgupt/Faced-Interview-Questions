@@ -178,9 +178,9 @@ Ans :-
 They are not exactly the same. A URI is an identifier of a specific resource. 
 Like a page, or book, or a document. A URL is special type of identifier that also tells you how to access it, such as HTTPs , FTP , etc
 --------------------------------------------
-21.
+21. SCRUM ?
 Ans-
 Scrum is an agile framework for developing, delivering, and sustaining complex products, with an initial emphasis on software development.
-21. TDD
+21. TDD ?
 Ans -
 Test-driven development (TDD) is a development technique where you must first write a test that fails before you write new functional code.
