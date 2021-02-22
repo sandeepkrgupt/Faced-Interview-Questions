@@ -1,20 +1,39 @@
 InnovationM
 
 1. what are peremeters in useEffect. What is second Parameter used for. What is second parameter is black array.
+Ans -
+If you omit it, effect will be executed after every render. 
+If you want effect to be executed only on first render, you can pass an empty array. Dependencies can be state or props.
 ---------------------------------------------
 2. React.memo Vs useMemo?
+Ans -
+React.memo is memo is a higher-order component (HOC) which accepts a react component and an optional function that uses props to conditionally update the component.
+useMemo is a react hook that will accept a function and a dependency array 
 ---------------------------------------------
 3. useCallback Hook in react?
 ---------------------------------------------
 4. what is key used in react?
+Ans -
+When creating lists of elements in React. Keys are used to React to identify which items in the list are changed, updated, or deleted. 
 ---------------------------------------------
 5. bindActionCreator() in redux?
-Ans -
-If there are many Actions written we can bind them using bindActionCreator.
+Ans - bindActionCreators(actionCreators, dispatch) , bind actionCreateor with dispatch.
+every action creator wrapped into a dispatch call so they may be invoked directly. Normally you should just call dispatch directly on your Store.
 ------------------------------------------------
 6. is Promise Async? what if there are many ajax call and some of them get fail?
+------------------------------------------------
 7. what is prototype in Javascript?
-8. Redux component and redux flow?
+Ans -
+All JavaScript objects inherit properties and methods from a prototype:
+Date objects inherit from Date.prototype.
+Array objects inherit from Array.prototype.
+Person objects inherit from Person.prototype.
+------------------------------------------------
+8. Redux component and redux flow? Redux Thunk?
+Ans-
+Redux follows the unidirectional data flow. It means that your application data will follow in one-way binding data flow.
+Redux Thunk-
+Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object.
 -----------------------------------------------
 9. Sementic tags advantages ?
 Ans -
@@ -31,4 +50,5 @@ The DOCTYPE declaration is an instruction to the web browser about what version 
 9. can we use componentDidMount in functional component?
 Ans -
 The React hook useEffect helps in adding componentDidUpdate and componentDidMount combined lifecycle in React's functional component. 
-So far we know we can add lifecycle methods in stateful component only
+So far we know we can add lifecycle methods in stateful component only.
+
