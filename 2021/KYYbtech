@@ -50,3 +50,70 @@ console.log(1+"2"+"3"); //123
 console.log(1++"2"+"3"); //123
 console.log(1++); //Invalid left-hand side expression in postfix operation
 console.log(1++2); // Invalid left-hand side expression in postfix operation
+-------------------------------------------
+import React, { useState } from "react";
+import "./styles.css";
+
+export default function App() {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+  const handleReset = () => {
+    setCount(0);
+  };
+
+  return (
+    <div className="App">
+      <h1>You've clicked the button {count} times.</h1>
+      <button onClick={handleClick}>Click me!</button>
+      <button onClick={handleReset}>Reset</button>
+    </div>
+  );
+}
+---------------------------------------------
+React Counter with Redux
+https://codesandbox.io/s/github/reactjs/redux/tree/master/examples/counter?file=/src/index.js 
+---------------------------------------------
+Counter Using Class Component-
+
+import React from 'react'
+import { render } from 'react-dom'
+
+const CounterBtn = props => {
+  return (<button className="btn"  onClick={props.onClick}>{props.children}</button>);
+}
+class App extends React.Component {
+   constructor( props ) {
+     super( props );
+      this.state = {
+        counter: 0,
+      };
+   }
+
+   incrementCounter = () => {
+     this.setState({ 
+       counter: this.state.counter + 1 
+      })
+   }
+   decrementCounter = () => {
+     this.setState({
+       counter:  this.state.counter - 1
+      })
+   }
+   resetCounter = () => {
+     this.setState({ counter: 0 })
+   }
+   render(){
+     return <div className="main-content">
+        <CounterBtn onClick={this.incrementCounter}>+</CounterBtn>
+        <span className="counter-text">{this.state.counter}</span>
+        <CounterBtn onClick={this.decrementCounter}>-</CounterBtn>
+        <CounterBtn onClick={this.resetCounter}>Reset</CounterBtn>
+        </div>
+   }
+}
+
+render(<App />, document.getElementById('root'))
+-----------------------------------------
