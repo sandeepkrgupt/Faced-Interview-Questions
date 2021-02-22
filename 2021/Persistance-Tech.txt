@@ -19,10 +19,10 @@ Same. Sementic tags are used for crawling.
 Ans :- No setTimeout is Async. So js compiler put it in diff. call stack.
 
 setTimeout(function(){
-   console.log(x);
+   console.log(x); // 2nd 5
 }, 1000)
 var x = 5;
-console.log(x);
+console.log(x); // 1st 5
 --------------------------------------------
 4. can we do ajax call in render()?
 Ans :-
