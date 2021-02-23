@@ -90,26 +90,6 @@ getsnapshopbeforeupp
 conppDidupdate - what can we do in componentDidUpdate?
 unMounting ---------
 componentwillunmount
----------------------
-
-class App extends React.Component {
-	constructor () {
-	 this.state = {
-	  name: 'Sandeep'
-	  age:3
-	  
-	 }
-
-	 changeName = () => {
-	  this.setState({
-	   this.state.name = 'Sandeep Kumar'
-	   age: 
-	  },())
-	 }
-	}
-	render()
-
-}
 ---------------------------
 var a =10;
 var b =20;
