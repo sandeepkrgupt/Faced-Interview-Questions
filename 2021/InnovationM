@@ -31,6 +31,7 @@ Person objects inherit from Person.prototype.
 ------------------------------------------------
 8. Redux component and redux flow? Redux Thunk?
 Ans- Redux Actions are synchronous.
+Redux Reducer are pure components, which takes two arguments state and action and return the updtaed state.
 Redux follows the unidirectional data flow. It means that your application data will follow in one-way binding data flow.
 Redux Thunk-
 Redux Thunk is async middleware that lets you call action creators that return a function instead of an action object.
