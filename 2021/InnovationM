@@ -57,3 +57,19 @@ Ans -
 delete() can be used for new chrome, firefox and opera.
  It stores program instructions and data that are used repeatedly in the operation.
  Caching can reduce the load on your database, and protect it from slower.
+----------------------------------
+11. How to use Inheritance in Es5?
+Ans - Using prototype.
+function Person(fName, lName) {
+  this.firstName = fName;
+  this.lastName = lName;
+}
+var p1 = new Person('Laxmikant','Dange');
+Person.prototype.getFullName = function () {
+  return this.firstName + ' ' + this.lastName;
+}
+function Employee(fName, lName, eId) {
+  Person.call(this, fName, lName);
+  this.empId = eId;
+}
+-----------------------------------
