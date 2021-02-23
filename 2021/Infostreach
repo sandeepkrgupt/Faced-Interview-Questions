@@ -119,6 +119,13 @@ why closure? realtime example ? advantages and example?
 ---------------------------
 What is one async method in React ?
 --------------------------
+log() after setState() , 
+it might not print out the latest state since the console log will execute before the state mutation. 
+This is due to the asynchronism of setState() which cannot guarantee the mutation of state to act at the moment. 
+In this case, React is doing its job and executes console.
+-----------------------
+
+--------------------------
 var obj1 = {
 name: 'san'
 }
