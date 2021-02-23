@@ -147,3 +147,26 @@ var emp1 = {
 name: 'wam',
 ...obj1
 } // san
+-----------------------
+class App extends React.Component {
+	constructor () {
+	 this.state = {
+	  name: 'Sandeep'
+	  age:3
+	  
+	 }
+
+	 changeName = () => {
+	 let newName = this.state;
+	 newName.name = 'Sandeep Kumar';
+	  this.setState({
+	   name: newName.name
+	  },())
+	 }
+	}
+	render() {
+	 return(<button onClick={this.changeName}></button>)
+	};
+
+}
+
