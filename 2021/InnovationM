@@ -30,10 +30,10 @@ Array objects inherit from Array.prototype.
 Person objects inherit from Person.prototype.
 ------------------------------------------------
 8. Redux component and redux flow? Redux Thunk?
-Ans-
+Ans- Redux Actions are synchronous.
 Redux follows the unidirectional data flow. It means that your application data will follow in one-way binding data flow.
 Redux Thunk-
-Redux Thunk is a middleware that lets you call action creators that return a function instead of an action object.
+Redux Thunk is async middleware that lets you call action creators that return a function instead of an action object.
 -----------------------------------------------
 9. Sementic tags advantages ?
 Ans -
