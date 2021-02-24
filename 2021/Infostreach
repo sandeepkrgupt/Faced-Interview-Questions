@@ -91,6 +91,11 @@ conppDidupdate - what can we do in componentDidUpdate?
 unMounting ---------
 componentwillunmount
 ---------------------------
+Redux Principle
+1. All application state should go in one single javascript object.
+2. Redux states are immutable or read only. we cannot write or edit state.
+3. if we want to edit or mutate state we need to use functions. which will take prevoius state , action to dispatch and return next state.
+-----------------------------
 var a =10;
 var b =20;
 swap two number without using third variable.
