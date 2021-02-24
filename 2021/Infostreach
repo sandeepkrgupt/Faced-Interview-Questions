@@ -161,3 +161,14 @@ You can't get at the data from an outside scope
 
 if there is a counter as zero counter = 0 in any function and we increment the counter. Then when ever the function will be called
 counter will reset to zero and will always print 1. To overcome this issue we use closure.
+
+var incrementCount = (function() {
+  count = 0;
+  return function(){
+   return ++count;
+  }
+}());
+
+<button onclick=alert(incrementCount())>++</button>
+Note: - Outer function will call only once.
+
