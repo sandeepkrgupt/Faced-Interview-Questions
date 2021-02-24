@@ -6,19 +6,19 @@ lname:'abc'
 const emp = {
 fname: 'ssa',
 lname: 'abc'
-...obj,
 
 } //spread
 
 const emp1 = {
 fname:'wwe',
 lname:'aa',
-...obj
+  ...obj
 }
-console.log(emp1);
+console.log(emp1); // Object { fname: "ssa", lname: "abc" }
 
-obj == emp //true
-obj === emp // true
+console.log(obj == emp) //false
+console.log(obj === emp) // false
+---------------------------------------
 
 function abc(....obj) { //rest
 }
