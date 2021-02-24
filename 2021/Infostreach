@@ -154,4 +154,7 @@ class App extends React.Component {
 	};
 
 }
-
+---------------------------------------
+Why Closure -
+When you use closures for data privacy, the enclosed variables are only in scope within the containing (outer) function. 
+You can't get at the data from an outside scope 
