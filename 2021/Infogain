@@ -1,0 +1,27 @@
+1. Is Js synchronous?
+--------------------------------------------
+2. console.log(7>5) and (7>6>5) output?
+--------------------------------------------
+3. var a;
+  console.log(a)
+  a=10 // 10
+ --------------------------------------------
+4. closures ?
+Ans - they are call back functions which is called only one/first time.
+----------------------------------------------
+5. pseudo class and pseudo elements in css?
+----------------------------------------------
+6. Js event capturing ?
+------------------------------------------------
+7. how many parameter we can pass in connect method?
+--------------------------------------------------
+Ans - 4 , mapStateToProps, mapDispatchToProps, Dispatcher, ?
+-----------------------------------------------------
+8. Js shallow copy and deep copy ?
+Ans - objA = {
+ name: 'Sam'
+}
+var objB = objA;
+objB.name = "nnnm";
+This is shallow copy.
+-------------------------------------------------------
