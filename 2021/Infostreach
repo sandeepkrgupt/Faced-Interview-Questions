@@ -158,3 +158,6 @@ class App extends React.Component {
 Why Closure -
 When you use closures for data privacy, the enclosed variables are only in scope within the containing (outer) function. 
 You can't get at the data from an outside scope 
+
+if there is a counter as zero counter = 0 in any function and we increment the counter. Then when ever the function will be called
+counter will reset to zero and will always print 1. To overcome this issue we use closure.
