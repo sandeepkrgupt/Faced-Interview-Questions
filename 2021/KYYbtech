@@ -117,3 +117,51 @@ class App extends React.Component {
 
 render(<App />, document.getElementById('root'))
 -----------------------------------------
+const obj = {};
+const n = null
+console.log(obj == n) // false
+console.log(obj === n) // false
+-----------------------------------------
+Slice Vs Splice
+ The splice() method returns the removed item(s) in an array and slice() method returns the selected element(s) in an array, as a new array object. 
+ 2. The splice() method changes the original array and slice() method doesn't change the original array.
+ -------------------------------------------
+ toString()
+ Return the value of String Object.
+ ---------------------------------------
+ Window Events :-
+onclick
+onerror: 
+onfocus:
+onload:
+onmouseenter:
+onmousemove: 
+onmouseout: 
+onmouseover: 
+onpause: 
+onplay:
+onprogress:
+onreset: 
+onresize: 
+onscroll:
+onsearch: 
+onselect: 
+onsubmit:
+----------------
+HTML Events
+onfocus
+onblur
+onchange
+onclick
+ondblclick
+onselect
+ontoggle
+-----------------------
+Network or HTTP response error codes
+Informational responses (100–199)
+Successful responses (200–299)
+Redirects (300–399)
+Client errors (400–499)
+Server errors (500–599)
+
+--------------------------------------------
