@@ -1,0 +1,150 @@
+console.log(1 + "2" + "2"); // 122
+console.log(1 + +"2" + "2"); // 32 (+"2" shorthand to convert string to int)
+console.log(1 + - "1" + "2");  // 02
+console.log(+ "1" +  "1" + "2"); // 112
+console.log("1" +  +"1" + +"2"); // 112 (Add any thing in sting is string)
+console.log(1 +  +"1" + +"2");//4
+console.log("A" - "B" + "2"); // NAN2
+console.log("A" - "B" + 2); // NAN
+-------------------------------------
+for (var i= 0; i < 5; i++) {
+		setTimeout(function() { console.log(i); }, i * 1000 );
+} // 5 time 5 - it has global scope 
+---------------------------------
+var a={}, // 
+    b={key:'b'},
+    c={key:'c'};
+
+a[b]=123;
+a[c]=456;
+console.log(a[b]); // 456
+console.log(a[c]); // 456
+console.log(a); // 456
+--------------------------
+class MyComponent extends React.Component {
+  constructor(props) {
+    // set the default internal state
+    this.state = {
+      clicks: 0
+    };
+  }
+
+  componentDidMount() {
+    this.refs.myComponentDiv.addEventListener('click', this.clickHandler);
+  }
+
+  componentWillUnmount() {
+    this.refs.myComponentDiv.removeEventListener('click', this.clickHandler);
+  }
+
+  clickHandler() {
+    this.setState({
+      clicks: this.clicks + 1
+    });
+  }
+  render() {
+    let children = this.props.children;
+
+    return (
+      <div className="my-component" ref="myComponentDiv">
+		<h2>My Component ({this.state.clicks} clicks})</h2>
+		<h3>{this.props.headerText}</h3>
+		{children}
+     </div>
+    );
+  }
+}
+-----------------------------------------------ANS---------------
+import React from "react";
+class MyComponent extends React.Component {
+  constructor(props) {
+    // set the default internal state
+    super(props); //1
+    this.state = {
+      clicks: 0
+    };
+    this.myComponentDiv = React.createRef(); //2
+  }
+  componentDidMount() {
+    this.myComponentDiv.current.addEventListener("click", this.clickHandler); // 3
+  }
+  componentWillUnmount() {
+    this.myComponentDiv.current.removeEventListener("click", this.clickHandler); //4
+  }
+clickHandler = () => { // 5
+    this.setState({
+      clicks: this.state.clicks + 1 //6
+    });
+  }
+  render() {
+    let children = this.props.children;
+    return (
+      <div className="my-component" ref={this.myComponentDiv}> // 7
+        <h2>My Component ({this.state.clicks} clicks)</h2> //8
+        <h3>{this.props.headerText}</h3> // not a bug it's empty only
+        {children} // not a bug
+      </div>
+    );
+  }
+}
+---------------------------------------------------------------------
+import React, { Component } from "react";
+class MyApp extends Component {
+  	constructor(props) {
+	super(props);
+    state = {
+      counter: 0,
+      status: "even"
+    };
+    firstName = React.createRef();
+    lastName = React.createRef();
+	}
+  clickHandler = () => {
+    let status = null;
+    let checkNumber = this.state.counter + 1;
+    console.log(checkNumber);
+
+    // status = checkNumber % 2 == 0 ? "even" : "odd";
+    if (checkNumber % 2 == 0) {
+      status = "even";
+      this.lastName.current.focus();
+    } else {
+      status = "odd";
+      this.firstName.current.focus();
+    }
+    console.log(status);
+
+    this.setState({
+      status: status,
+      counter: this.state.counter + 1
+    });
+  };
+  render() {
+    return (
+      <div>
+        <h1>Run my file</h1>
+        <input
+          type="text"
+          name="firstname"
+          value=""
+          id="fname"
+          ref={this.firstName}
+        />
+        <input
+          type="text"
+          name="lname"
+          value=""
+          id="lname"
+          ref={this.lastName}
+        />
+        <button onClick={this.clickHandler}>Click here</button>
+        <p>{this.state.counter}</p>
+        <p>{this.state.status}</p>
+      </div>
+    );
+  }
+}
+
+export default MyApp;
+-------------------------------------------------
+import React from 'react';

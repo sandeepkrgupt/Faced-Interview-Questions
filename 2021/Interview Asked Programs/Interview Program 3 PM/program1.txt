@@ -1,0 +1,59 @@
+Question 
+//Create an input box where users can type their search.
+//Display suggestions in a drop down. Suggestions should be fetched and displayed while typing
+//The input for the getSuggestion API will be the current word that is being typed not the whole search. The output for the getSuggestion API will be only for the current word.
+//getSuggestions API returns a promise which can get resolved or rejected at any time ranging from 0 - 200 ms.
+
+---------------------------------------------------
+import ReactDOM from "react-dom";
+import React, { Component } from "react";
+
+class Todo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userSearchVal: "",
+      searchItems: [
+        {
+          mobile: "Mi",
+          tv: "Lg"
+        },
+        {
+          mobile: "Samsung",
+          tv: "Lg"
+        }
+      ]
+    };
+  }
+  handleChange = (event) => {
+    //console.log(event.target.value);
+    let searchVal = event.target.value;
+    this.setState({
+      userSearchVal: searchVal
+    });
+  };
+
+  render() {
+    let state = this.state;
+    console.log(state);
+    return (
+      <div>
+        <span>Enter</span>
+        <input
+          type="text"
+          value={this.state.userSearchVal}
+          onChange={(event) => this.handleChange(event)}
+          autoSearch="true"
+        />
+        <select>
+          {state.searchItems.map((items) => {
+            //console.log('--->>>>', items.mobile)
+            <option>{items.mobile}</option>;
+          })}
+        </select>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Todo />, document.getElementById("root"));
