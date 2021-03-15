@@ -25,3 +25,52 @@ var objB = objA;
 objB.name = "nnnm";
 This is shallow copy.
 -------------------------------------------------------
+What happens when we Call Multiple setState ?
+Ans -
+It Merge All state valuse.
+handleAddOne() {
+    // console.log("handleAddOne");
+    this.setState(prevState => {
+      return {
+        count: prevState.count + 1
+      };
+    });
+    
+    this.setState(prevState => {
+      return {
+        count: prevState.count + 5
+      };
+    });
+  } // 6 , 12 (initial is 0 it will increse by (1+5 = 6))
+  ---------------------------------------
+  setState is a asynchronous function.
+  syntax -
+  setState(prevState, callbackFunction);
+  example -
+  this.state = {
+      count: 0
+  };
+  
+  handleClick() {
+    this.setState(prevState => {
+        const { count: prevCount } = prevState;
+        return {
+          count: prevCount + 1
+        };
+      },
+      () => {
+        this.setSomeOtherState();
+      }
+    );
+  }
+
+  setSomeOtherState() {
+    this.setState(prevState => {
+      const { count: prevCount } = prevState;
+      return {
+        count: prevCount + 10
+      };
+    });
+  }
+}
+
