@@ -44,7 +44,9 @@ class ClickityClick extends React.Component {
 export default ClickityClick;
 
 /*
-The spread operator syntax can be used in JavaScript to 'de-compose' objects and arrays. When used on an object as we see above, ...this.state.addressInfo returns all the keys and values from within that object
+The spread operator syntax can be used in JavaScript to 'de-compose' objects and arrays. 
+When used on an object as we see above, ...this.state.addressInfo returns all the keys 
+and values from within that object
 */
 
 /*
@@ -54,7 +56,9 @@ handleClick = () => {
   })
   console.log(this.state.hasBeenClicked); // false
 }
-State changes, however instant they might appear, happen asynchronously. If we want to access our new state after it has been updated, we can optionally add a callback as a second argument to the this.setState() function.
+State changes, however instant they might appear, happen asynchronously. 
+If we want to access our new state after it has been updated, we can optionally 
+add a callback as a second argument to the this.setState() function.
 */
 
 
